@@ -167,10 +167,9 @@ with open("file1.txt", "r+", encoding='UTF-8') as f1:
      count = 0
      for i in text:
           newText += i[count]
-     print(newText)
 
      newText = newText.replace(previousWord, newWord)
-
+     print(f"Перейдите в {f1.name}, чтобы проверить изменения.")
      with open("file1.txt", "w+", encoding='UTF-8') as f1:
           pass
           f1.write(newText)
