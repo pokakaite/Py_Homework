@@ -2,8 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Уже проверено/PyHW20" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Уже проверено/PyHW20/git_test" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Уже проверено/PyHW21" vcs="Git" />
   </component>
 </project>
