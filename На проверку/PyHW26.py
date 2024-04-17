@@ -14,28 +14,94 @@
 # В зависимости от выбора пользователя выполняется
 # действие, после чего меню отображается снова.
 
-def newSet():
-    numbers = input('Введите числа через пробел - ')
-    sp = numbers.split(' ')
-    set1 = set()
-    for number in sp:
-        number = int(number)
-        set1.add(number)
-    print(set1)
+class Set:
+    def __init__(self):
+        self.numbers = input('Введите числа через пробел - ')
+        self.someSet = []
 
-    newNumber = int(input('Введите число, которое хотите добавить в список - '))
-    # try:
-    #
-    # except Exception:
-    #     print('Такое число уже есть в списке.')
-    # else:
-    #     set1.add(newNumber)
+    def make_List(self):
+        sp = self.numbers.split(' ')
+        for number in sp:
+            number = int(number)
+            self.someSet.append(number)
 
-print(newSet())
+    def make_Set(self):
+        sp = self.numbers.split(' ')
+        self.someSet = set()
+        for number in sp:
+            number = int(number)
+            self.someSet.add(number)
+
+    def changeSet(self, newElement, deleteElement, showSet, checkElement, replaceElement):
+        print(f"Ваш список - {self.someSet}\n")
+        choice = int(input('''Что хотите сделать со списком?
+        1 - Добавить новое число в список;
+        2 - Удалить все вхождения числа из списка;
+        3 - Показать содержимое списка;
+        4 - Проверить есть ли значение в списке;
+        5 - Заменить значение в списке;
+        6 - Выйти.\n'''))
+
+        if choice == 1:
+            newElement()
+        if choice == 2:
+            deleteElement()
+        if choice == 3:
+            showSet()
+        if choice == 4:
+            checkElement()
+        if choice == 5:
+            replaceElement()
+        if choice == 6:
+            pass
+        return self.changeSet(newElement, deleteElement, showSet, checkElement, replaceElement)
+
+    def newElement(self):
+        newNumber = int(input('Введите число, которое хотите добавить в список - '))
+        if newNumber in self.someSet:
+            print('Такое число уже есть в списке.\n')
+        else:
+            self.someSet.append(newNumber)
+
+    def deleteElement(self):
+        deletedNumber = int(input('Введите число, которое хотите удалить из списка - '))
+        if deletedNumber in self.someSet:
+            while deletedNumber in self.someSet:
+                self.someSet.remove(deletedNumber)
+        else:
+            print("Такого числа нет в списке.\n")
+
+    def showSet(self):
+        choice = int(input('''Выберите, каким хотите видеть список.
+        1 - Показать список с начала;
+        2 - Показать список с конца.\n'''))
+
+        if choice == 1:
+            print('Список с начала -', self.someSet)
+        if choice == 2:
+            print('Список с конца -', sorted((self.someSet), reverse=True))
+
+    def checkElement(self):
+        choice = int(input('Введите число, которое хотите проверить на наличие в списке - '))
+        if choice in self.someSet:
+            print(f'Число {choice} есть в списке.')
+        else:
+            print(f'Числа {choice} нет в списке.')
+
+    def replaceElement(self):
+        oldNumber = int(input("Введите число, которое хотите заменить - "))
+        newNumber = int(input("Введите новое число - "))
+        # copyOfSet = self.someSet
+        # self.someSet = []
+        # for number in copyOfSet:
+        #     if oldNumber == newNumber:
+        #         self.someSet.append(number)
 
 
 
-
+list = Set()
+list.make_List()
+list.changeSet(list.newElement, list.deleteElement, list.showSet, list.checkElement, list.replaceElement)
 
 # Задание 2
 # Реализуйте класс стека для работы со строками (стек
