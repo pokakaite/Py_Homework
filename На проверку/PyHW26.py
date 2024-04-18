@@ -83,19 +83,29 @@ class Set:
 
     def checkElement(self):
         choice = int(input('Введите число, которое хотите проверить на наличие в списке - '))
-        if choice in self.someSet:
-            print(f'Число {choice} есть в списке.')
-        else:
-            print(f'Числа {choice} нет в списке.')
+        count = 0
+        for c in self.someSet:
+            count += 1
+            if c == choice:
+                print(f"Число {choice} есть в списке и находится под номером {count}\n")
+        if choice not in self.someSet:
+            print(f"Такого числа нет в списке.\n")
 
     def replaceElement(self):
         oldNumber = int(input("Введите число, которое хотите заменить - "))
+        choice = int(input('''
+        1 - Заменить первое вхождение числа,
+        2 - Заменить все вхождения числа.
+        '''))
         newNumber = int(input("Введите новое число - "))
-        # copyOfSet = self.someSet
-        # self.someSet = []
-        # for number in copyOfSet:
-        #     if oldNumber == newNumber:
-        #         self.someSet.append(number)
+        if choice == 1:
+            if oldNumber in self.someSet:
+                self.someSet.remove(oldNumber)
+                self.someSet.append(newNumber)
+        if choice == 2:
+            while oldNumber in self.someSet:
+                self.someSet.remove(oldNumber)
+                self.someSet.append(newNumber)
 
 
 
