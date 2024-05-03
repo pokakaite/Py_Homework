@@ -23,9 +23,10 @@ sweets_list = {
 }
 
 products_list = meat_list, grocery_list, sweets_list
-# summ = ''
 
 class Grocery:
+    busket = []
+    summ = []
     def __init__(self, category, products):
         self.category = category
         self.products = products
@@ -41,26 +42,31 @@ class Grocery:
               f'\nНаша продукция:')
 
     @staticmethod
-    def menu():
-        product = input("\nВведите название товара, который хотите приобрести - ")
+    def addToBusket():
+        product = input("\nВведите название товара, который добавить в корзину - ")
         amount = int(input("Введите количество товара - "))
+        items = []
 
         for i in products_list:
-            for item, price in i.items():
-                if product == item:
-                    # summ += int()
-                    print(f'\nТовар "{product}" добавлен в корзину в количестве {amount} шт.')
+            for item in i:
+                items.append(item)
+
+        if product not in items:
+            print(f'\nК сожалению, товар под названием "{product}" не представлен в нашем магазине :(')
         else:
-            if product not in [i for i in products_list]:
-                print(f'\nК сожалению, товар под названием "{product}" не представлен в нашем магазине :(')
-
-
-        # for i in summ:
-        #     i += i
-        # print(f'Сумма всех товаров, добавленных в корзину - {i * amount} рублей.')
-        # return Grocery.menu()
-
-
+            for i in products_list:
+                for item, price in i.items():
+                    if product == item:
+                        Grocery.busket.append({product: amount})
+                        Grocery.summ.append(price * amount)
+                        print(f'\nТовар "{product}" добавлен в корзину в количестве {amount} шт.')
+                        print(f'Ваша корзина:')
+                        count = 0
+                        for i in Grocery.busket:
+                            count += 1
+                            for item, amount in i.items():
+                                print(f'{count}. {item} - {amount} шт.')
+                        print(f'\nСумма товаров - {sum(Grocery.summ)} рублей.')
 
 
 meat = Grocery('Мясной отдел', meat_list)
@@ -71,5 +77,3 @@ Grocery.greeting()
 meat.show()
 grocery.show()
 sweets.show()
-Grocery.menu()
-
