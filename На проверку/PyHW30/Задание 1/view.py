@@ -2,9 +2,12 @@ from model import *
 
 def showAllShoes():
     print(f'''\nИнформация об обуви:\n''')
-    for shoe in shoes:
+    count = 0
+    for shoe in Shoes.shoes:
+        count += 1
+        print(f'Обувь {count}:')
         for key, value in shoe.items():
-            print(f'{key} - {value}')
+            print(f'\t\t{key} - {value}')
         print('\n')
 
 def startView():
