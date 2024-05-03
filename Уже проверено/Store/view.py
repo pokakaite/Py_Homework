@@ -27,7 +27,10 @@ def menu():
                     print(f'\nСумма товаров - {sum(Grocery.summ)} рублей.')
 
 def toPay():
-    print('Спасибо за покупку. Ждём вас снова')
+    if Grocery.money() < sum(Grocery.summ):
+        print('У вас не хватает денег :( Очень жаль!')
+    else:
+        print('Спасибо за покупку. Ждём вас снова')
 
 def toQuit():
     print('\nДо свидания! Ждём вас снова!')

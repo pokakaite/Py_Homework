@@ -42,6 +42,11 @@ class Grocery:
               f'\nНаша продукция:')
 
     @staticmethod
+    def money():
+        money = int(input("\nВведите количество ваших денюжек - "))
+        return money
+
+    @staticmethod
     def addToBusket():
         product = input("\nВведите название товара, который добавить в корзину - ")
         amount = int(input("Введите количество товара - "))
