@@ -1,3 +1,24 @@
+from model import *
+
+class BooksCache:
+    cache = {}
+
+    @staticmethod
+    def load():
+        anna = AnnaKarenina()
+        anna.set_id('1')
+        BooksCache.cache[anna.get_id()] = anna
+
+        mam = MasterAndMargarita()
+        mam.set_id('2')
+        BooksCache.cache[mam.get_id()] = mam
+
+    @staticmethod
+    def get_book(sid):
+        book = BooksCache.cache.get(sid, None)
+        return book.clone()
+
+
 class Input:
     def __init__(self):
         self.input = None
@@ -81,3 +102,26 @@ class Show:
 
     def to_show(self):
         print(self.info)
+
+
+def menu():
+
+    print('\n\tКниги библиотеки:\n')
+    BooksCache.load()
+
+    anna = BooksCache.get_book("1")
+    mam = BooksCache.get_book("2")
+    print(f'{anna.get_id()}. {anna.get_name()}')
+    print(f'{mam.get_id()}. {mam.get_name()}')
+    print()
+    print('\tИнформация о библиотекаре:\n')
+    librarian = Librarian()
+    print(f'ФИО - {librarian.__str__()}')
+    print(f'Заработная плата - {librarian.get_salary()} рублей.')
+    print()
+    print('\tИнформация о читателе:\n')
+    reader = Reader()
+    print(f'ФИО - {reader.__str__()}')
+    print(f'Возраст - {reader.get_age()}')
+
+menu()
