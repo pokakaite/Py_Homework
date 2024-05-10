@@ -6,18 +6,6 @@ class Book:
         return self.name
 
 
-class AnnaKarenina(Book):
-    def __init__(self):
-        super().__init__()
-        self.name = 'Анна Каренина'
-
-
-class MasterAndMargarita(Book):
-    def __init__(self):
-        super().__init__()
-        self.name = 'Мастер и Маргарита'
-
-
 class Reader:
     def __init__(self):
         self.name = 'Данилова Екатерина Александровна'

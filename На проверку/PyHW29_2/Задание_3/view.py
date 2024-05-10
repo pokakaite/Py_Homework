@@ -128,11 +128,13 @@ class Search:
 
 
 def books():
-    anna = AnnaKarenina()
+    anna = Book()
+    anna.name = 'Анна Каренина'
     book_1 = AddToCollection(anna.get_name())
     book_1.add_book()
 
-    mam = MasterAndMargarita()
+    mam = copy.deepcopy(anna)
+    mam.name = 'Мастер и Маргарита'
     book_2 = AddToCollection(mam.get_name())
     book_2.add_book()
 
