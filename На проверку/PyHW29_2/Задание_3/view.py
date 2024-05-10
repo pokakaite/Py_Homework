@@ -2,7 +2,7 @@ import getpass
 
 from model import *
 import time
-import os
+import copy
 
 
 class AddToCollection:
@@ -135,6 +135,16 @@ def books():
     mam = MasterAndMargarita()
     book_2 = AddToCollection(mam.get_name())
     book_2.add_book()
+
+    oblomov = copy.deepcopy(anna)
+    oblomov.name = 'Обломов'
+    book_3 = AddToCollection(oblomov.get_name())
+    book_3.add_book()
+
+    fathers_and_sons = copy.deepcopy(anna)
+    fathers_and_sons.name = 'Отцы и дети'
+    book_4 = AddToCollection(fathers_and_sons.get_name())
+    book_4.add_book()
 
 
 def show_collection():
