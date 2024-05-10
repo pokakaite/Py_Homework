@@ -1,22 +1,5 @@
 from model import *
 
-# class BooksCache:
-#     cache = {}
-#
-#     @staticmethod
-#     def load():
-#         anna = AnnaKarenina()
-#         anna.set_id('1')
-#         BooksCache.cache[anna.get_id()] = anna
-#
-#         mam = MasterAndMargarita()
-#         mam.set_id('2')
-#         BooksCache.cache[mam.get_id()] = mam
-#
-#     @staticmethod
-#     def get_book(sid):
-#         book = BooksCache.cache.get(sid, None)
-#         return book.clone()
 
 class Books:
     cache = []
@@ -113,7 +96,3 @@ class Show:
 
     def to_show(self):
         print(self.info)
-
-
-
-

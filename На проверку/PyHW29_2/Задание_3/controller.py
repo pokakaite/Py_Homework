@@ -3,14 +3,9 @@ from view import *
 
 if __name__ == '__main__':
     def show_info():
-        # BooksCache.load()
-        #
-        # anna = BooksCache.get_book("1")
-        # mam = BooksCache.get_book("2")
-        # print(f'''\nКниги библиотеки:
-        # {anna.get_id()}. {anna.get_name()}
-        # {mam.get_id()}. {mam.get_name()}
-        # ''')
+        anna = AnnaKarenina()
+        print(anna.book_info())
+
 
         librarian = Librarian()
         print(f'''Информация о библиотекаре:
