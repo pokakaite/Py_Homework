@@ -1,70 +1,97 @@
+import getpass
+
 from model import *
+import time
+import os
 
 
-class Books:
-    cache = []
+class AddToCollection:
+    collection = []
 
-    def __init__(self):
-        self.book = None
+    def __init__(self, book):
+        self.book = book
 
     def add_book(self):
-        Books.cache.append(self.book)
+        AddToCollection.collection.append(self.book)
+
+    def get_collection(self):
+        return AddToCollection.collection
 
 
-class Input:
+class ShowCollection(AddToCollection):
     def __init__(self):
-        self.input = None
+        super().__init__(self)
 
-    def to_input(self):
-        self.input = input({})
+    def show(self):
+        count = 0
+        for book in AddToCollection.collection:
+            count += 1
+            print(f'\t{count}. {book}')
 
 
-
-
-class Delete:
+class AddNewBook:
     def __init__(self):
-        self.info = None
+        self.name = None
 
-    def to_delete(self):
-        pass
+    def add_name(self):
+        self.name = input('Введите название книги - ')
+        return self.name
+
+    def get_name(self):
+        return self.name
 
 
-class Change:
-    def __init__(self):
-        self.info = None
+class DeleteBook():
+    def __init__(self, book, collection):
+        self.book = book
+        self.collection = collection
 
-    def to_change(self):
-        self.info = input('Введите новую информацию:\n')
-        return self.info
+    def delete_book(self):
+        self.collection.pop(self.book - 1)
+
+
+class ChangeBook(AddToCollection):
+    def __init__(self, old_book):
+        super().__init__(self)
+        self.old_book = old_book
+        self.new_book = None
+
+    def get_new_book(self):
+        self.new_book = input('Введите название новой книги - ')
+
+    def change_book(self):
+        AddToCollection.collection.pop(self.old_book - 1)
+        AddToCollection.collection.append(self.new_book)
 
 
 class Save:
-    def __init__(self):
-        self.file_name = None
-        self.info = None
+    def __init__(self, info):
+        self.file_name = 'save.txt'
+        self.info = info
 
     def to_save(self):
-        with open(self.file_name, 'a+', encoding='UTF-8') as f:
-            f.write(self.info)
+        with open(self.file_name, 'w+', encoding='UTF-8') as f:
+            f.write(str(self.info))
             f.write('\n')
 
 
 class Load:
     def __init__(self):
-        self.file_name = None
+        self.file_name = 'save.txt'
         self.info = None
 
     def to_load(self):
         with open(self.file_name, 'r+', encoding='UTF-8') as f:
             self.info = f.read()
+            print(self.info)
             return self.info
 
 
 class Log:
-    def __init__(self, name, time, user, info):
-        self.name = name
-        self.time = time
-        self.user = user
+    def __init__(self, info):
+        self.name = 'log_file.txt'
+        self.time = time.time()
+        self.user = getpass.getuser()
         self.info = info
 
     def __str__(self):
@@ -77,22 +104,113 @@ class Log:
             f.write(', Имя пользователя - ')
             f.write(str(self.user))
             f.write('\n')
-            f.write('Информация: ')
+            f.write('Коллекция книг: ')
             f.write(str(self.info))
             f.write('\n\n')
 
 
 class Search:
-    def __init__(self):
-        self.info = None
+    def __init__(self, collection):
+        self.book = None
+        self.collection = collection
+
+    def get_name(self):
+        self.book = input('Введите название книги, которую хотите найти - ')
+        return self.book
 
     def to_search(self):
+        if self.book in self.collection:
+            for i in range(len(self.collection)):
+                if self.book == self.collection[i]:
+                    print(f'Такая книга есть в библиотеке и находится под номером - {i + 1}')
+        else:
+            print(f'Такой книги нет в библиотеке.')
+
+
+def books():
+    anna = AnnaKarenina()
+    book_1 = AddToCollection(anna.get_name())
+    book_1.add_book()
+
+    mam = MasterAndMargarita()
+    book_2 = AddToCollection(mam.get_name())
+    book_2.add_book()
+
+
+def show_collection():
+    print('\nКниги библиотеки:')
+    show = ShowCollection()
+    show.show()
+
+
+def delete_book(index):
+    delete = DeleteBook(index, AddToCollection.collection)
+    delete.delete_book()
+
+
+def change_book(index):
+    change = ChangeBook(index)
+    change.get_new_book()
+    change.change_book()
+
+
+def to_save():
+    save = Save(AddToCollection.collection)
+    save.to_save()
+
+
+def to_load():
+    load = Load()
+    load.to_load()
+
+
+def to_log():
+    log = Log(AddToCollection.collection)
+    log.log_file()
+
+
+def to_search():
+    search = Search(AddToCollection.collection)
+    search.get_name()
+    search.to_search()
+
+books()
+
+def menu():
+    show_collection()
+    choice = int(input('''\nЧто вы хотите сделать?
+    1 - Удалить книгу,
+    2 - Изменить книгу,
+    3 - Сохранить информацию о книгах в файл,
+    4 - Загрузить информацию из файла,
+    5 - Найти книгу в библиотеке,
+    6 - Выйти
+    '''))
+
+    if choice == 1:
+        which = int(input('Введите номер книги, которую хотите удалить - '))
+        delete_book(which)
+        to_log()
+
+    if choice == 2:
+        which = int(input('Введите номер книги, которую хотите изменить - '))
+        change_book(which)
+        to_log()
+
+    if choice == 3:
+        to_save()
+        to_log()
+
+    if choice == 4:
+        to_load()
+        to_log()
+
+    if choice == 5:
+        to_search()
+        to_log()
+
+    if choice == 6:
         pass
 
+    return menu()
 
-class Show:
-    def __init__(self):
-        self.info = None
-
-    def to_show(self):
-        print(self.info)
