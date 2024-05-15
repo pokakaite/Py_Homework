@@ -82,18 +82,17 @@ class ShowHotDog:
         self.id = id
 
     def show_id(self):
-        print(f'Рецепт №{self.id}\n')
+        print(f'Рецепт №{self.id}')
 
     def show_name(self):
-        print(f'Название - {self.name}\n')
+        print(f'Название - "{self.name}"')
 
     def show_recipe(self):
         for i in self.recipe:
-            print(i)
-        print('\n')
+            print('\t', i)
 
     def show_price(self):
-        print(f'Цена - {self.price}\n')
+        print(f'Цена - {self.price} рублей')
 
 
 standart_recipe = HotDogRecipe()
@@ -149,4 +148,9 @@ recipes_list.add_to_list(standart_recipe.get_recipe())
 recipes_list.add_to_list(mexican_recipe.get_recipe())
 recipes_list.add_to_list(vegan_recipe.get_recipe())
 
-standart = HotDog()
+standart = ShowHotDog(standart_name.get_name(), standart_price.get_price(),
+                      standart_recipe.get_recipe(), standart_id.get_id())
+standart.show_id()
+standart.show_name()
+standart.show_recipe()
+standart.show_price()

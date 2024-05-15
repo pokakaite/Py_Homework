@@ -1,36 +1,6 @@
 import hot_dog, toppings
 
 
-class ShowHotDog:
-    def __init__(self, id, name, price, recipe):
-        self.id = id
-        self.name = name
-        self.price = price
-        self.recipe = recipe
-
-    def show(self):
-        print(f'\n{self.id}. {self.name}:')
-        for ingredient in self.recipe:
-            print(f'\t\t{ingredient}')
-        print(f'Цена: {self.price} рублей.')
-
-
-show_standart = ShowHotDog(hot_dog.standart_id.get_id(),
-                           hot_dog.standart_name.get_name(),
-                           hot_dog.standart_price.get_price(),
-                           hot_dog.standart.get_hot_dog())
-
-show_mexican = ShowHotDog(hot_dog.mexican_id.get_id(),
-                          hot_dog.mexican_name.get_name(),
-                          hot_dog.mexican_price.get_price(),
-                          hot_dog.mexican.get_hot_dog())
-
-show_vegan = ShowHotDog(hot_dog.vegan_id.get_id(),
-                        hot_dog.vegan_name.get_name(),
-                        hot_dog.vegan_price.get_price(),
-                        hot_dog.vegan.get_hot_dog())
-
-
 class ChooseHotDog:
     def __init__(self):
         self.hot_dog = None
@@ -113,10 +83,6 @@ class MakeHotDog:
 def menu():
     greeting = Greeting()
     greeting.greeting()
-
-    show_standart.show()
-    show_mexican.show()
-    show_vegan.show()
 
     choice = Choice()
     choice.choice()
