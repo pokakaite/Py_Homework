@@ -1,23 +1,17 @@
 import recipe_names, buns, sausages, sauses, toppings
 
 
-class BuildHotDog:
+class HotDog:
     def __init__(self):
-        self.hot_dog = None
-
-    def set_hot_dog(self):
-        self.hot_dog = []
-
-    def add_to_hot_dog(self, ingredient):
-        self.hot_dog.append(ingredient)
-
-    def get_hot_dog(self):
-        return self.hot_dog
-
-
-class HotDogPrice:
-    def __init__(self):
+        self.name = None
         self.price = None
+        self.recipe = None
+        self.id = None
+
+
+class HotDogPrice(HotDog):
+    def __init__(self):
+        super().__init__()
 
     def set_price(self, price):
         self.price = price
@@ -26,9 +20,9 @@ class HotDogPrice:
         return self.price
 
 
-class HotDogName:
+class HotDogName(HotDog):
     def __init__(self):
-        self.name = None
+        super().__init__()
 
     def set_name(self, name):
         self.name = name
@@ -37,15 +31,33 @@ class HotDogName:
         return self.name
 
 
-class HotDogId:
+class HotDogId(HotDog):
     def __init__(self):
-        self.id = None
+        super().__init__()
 
     def set_id(self, id):
         self.id = id
 
     def get_id(self):
         return self.id
+
+
+class HotDogRecipe(HotDog):
+    def __init__(self):
+        super().__init__()
+
+    def set_recipe(self):
+        self.recipe = []
+
+    def add_to_recipe(self, ingredient):
+        self.recipe.append(ingredient)
+
+    def get_recipe(self):
+        return self.recipe
+
+    def show_recipe(self):
+        for i in self.recipe:
+            print(i)
 
 
 class AllHotDogs:
@@ -62,9 +74,53 @@ class AllHotDogs:
         return self.list_hot_dogs
 
 
-standart = BuildHotDog()
-mexican = BuildHotDog()
-vegan = BuildHotDog()
+class ShowHotDog:
+    def __init__(self, name, price, recipe, id):
+        self.name = name
+        self.price = price
+        self.recipe = recipe
+        self.id = id
+
+    def show_id(self):
+        print(f'Рецепт №{self.id}\n')
+
+    def show_name(self):
+        print(f'Название - {self.name}\n')
+
+    def show_recipe(self):
+        for i in self.recipe:
+            print(i)
+        print('\n')
+
+    def show_price(self):
+        print(f'Цена - {self.price}\n')
+
+
+standart_recipe = HotDogRecipe()
+mexican_recipe = HotDogRecipe()
+vegan_recipe = HotDogRecipe()
+
+standart_recipe.set_recipe()
+standart_recipe.add_to_recipe(buns.wheat_bun.get_name())
+standart_recipe.add_to_recipe(sausages.milky.get_name())
+standart_recipe.add_to_recipe(sauses.ketchup.get_name())
+standart_recipe.add_to_recipe(sauses.mayonaise.get_name())
+
+mexican_recipe.set_recipe()
+mexican_recipe.add_to_recipe(buns.wheat_bun.get_name())
+mexican_recipe.add_to_recipe(sausages.chicken.get_name())
+mexican_recipe.add_to_recipe(sauses.salsa.get_name())
+mexican_recipe.add_to_recipe(toppings.jalapeno.get_name())
+mexican_recipe.add_to_recipe(toppings.cheese.get_name())
+mexican_recipe.add_to_recipe(toppings.onion.get_name())
+
+vegan_recipe.set_recipe()
+vegan_recipe.add_to_recipe(buns.rye_bun.get_name())
+vegan_recipe.add_to_recipe(sausages.soy.get_name())
+vegan_recipe.add_to_recipe(sauses.ketchup.get_name())
+vegan_recipe.add_to_recipe(sauses.mustard.get_name())
+vegan_recipe.add_to_recipe(toppings.onion.get_name())
+vegan_recipe.add_to_recipe(toppings.pickles.get_name())
 
 standart_price = HotDogPrice()
 standart_price.set_price(150)
@@ -87,43 +143,10 @@ mexican_id.set_id(2)
 vegan_id = HotDogId()
 vegan_id.set_id(3)
 
-
-def standart_recipe():
-    standart.set_hot_dog()
-    standart.add_to_hot_dog(buns.wheat_bun.get_name())
-    standart.add_to_hot_dog(sausages.milky.get_name())
-    standart.add_to_hot_dog(sauses.ketchup.get_name())
-    standart.add_to_hot_dog(sauses.mayonaise.get_name())
-    return standart.get_hot_dog()
-
-
-def mexican_recipe():
-    mexican.set_hot_dog()
-    mexican.add_to_hot_dog(buns.wheat_bun.get_name())
-    mexican.add_to_hot_dog(sausages.chicken.get_name())
-    mexican.add_to_hot_dog(sauses.salsa.get_name())
-    mexican.add_to_hot_dog(toppings.jalapeno.get_name())
-    mexican.add_to_hot_dog(toppings.cheese.get_name())
-    mexican.add_to_hot_dog(toppings.onion.get_name())
-    return mexican.get_hot_dog()
-
-
-def vegan_recipe():
-    vegan.set_hot_dog()
-    vegan.add_to_hot_dog(buns.rye_bun.get_name())
-    vegan.add_to_hot_dog(sausages.soy.get_name())
-    vegan.add_to_hot_dog(sauses.ketchup.get_name())
-    vegan.add_to_hot_dog(sauses.mustard.get_name())
-    vegan.add_to_hot_dog(toppings.onion.get_name())
-    vegan.add_to_hot_dog(toppings.pickles.get_name())
-    return vegan.get_hot_dog()
-
-standart_recipe()
-mexican_recipe()
-vegan_recipe()
-
 recipes_list = AllHotDogs()
 recipes_list.set_list()
-recipes_list.add_to_list(standart_recipe())
-recipes_list.add_to_list(mexican_recipe())
-recipes_list.add_to_list(vegan_recipe())
+recipes_list.add_to_list(standart_recipe.get_recipe())
+recipes_list.add_to_list(mexican_recipe.get_recipe())
+recipes_list.add_to_list(vegan_recipe.get_recipe())
+
+standart = HotDog()

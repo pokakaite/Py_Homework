@@ -49,41 +49,30 @@ class ChooseHotDog:
 class ToppingsQuestion:
     def toppings_question(self):
         choice = int(input('''Желаете добавить топпинги?
-           1 - Да,
-           2 - Нет
-           '''))
+        1 - Да,
+        2 - Нет
+        '''))
         return choice
 
 
 class ChooseTopping:
     def __init__(self):
         self.topping = None
+        self.amount = None
 
     def choose_topping(self):
         toppings_list = toppings.list_making()
         count = 0
         for topping in toppings_list:
             count += 1
-            print(f'{count} - {topping}')
+            print(f'{count}. {topping}, ({self.amount} штук в наличии.)')
         self.topping = int(input('Введите номер топпинга, который хотите добавить - '))
 
     def get_topping(self):
         return self.topping
 
 
-class GetTopping:
-    def __init__(self):
-        self.topping = None
-
-    def get_topping(self, list, topping):
-        for i in list:
-            if i == list[topping - 1]:
-                self.topping = i
-                return self.topping
-
-
 class AddTopping:
-
     def add_topping(self, hot_dog, topping):
         hot_dog.append(topping)
 
@@ -101,6 +90,24 @@ class Choice:
         1 - Выбрать хот-дог из меню,
         2 - Создать свой.\n'''))
         return choice
+
+
+class MakeHotDog:
+    def __init__(self):
+        self.hot_dog = None
+
+    def set_hot_dog(self):
+        self.hot_dog = []
+
+    def add_hot_dog(self, hot_dog):
+        for i in hot_dog:
+            self.hot_dog.append(i)
+
+    def add_topping(self, topping):
+        self.hot_dog.append(topping)
+
+    def get_hot_dog(self):
+        return self.hot_dog
 
 
 def menu():
@@ -123,18 +130,13 @@ def menu():
     choose_topping = ChooseTopping()
     choose_topping.choose_topping()
 
-    get_topping = GetTopping()
-
-    add_topping = AddTopping()
-    add_topping.add_topping(hot_dog.recipes_list.get_list()[choose_hot_dog.get_hot_dog() - 1],
-                            get_topping.get_topping(toppings.list_making(), choose_topping.get_topping()))
-    print(hot_dog.recipes_list.get_list())
-    print(hot_dog.standart_recipe())
-
-
-
-
-
+    new_hot_dog = MakeHotDog()
+    new_hot_dog.set_hot_dog()
+    new_hot_dog.add_hot_dog(hot_dog.recipes_list.get_list()[choose_hot_dog.get_hot_dog() - 1])
+    print(new_hot_dog.get_hot_dog())
+    new_hot_dog.add_topping(toppings.list_making()[choose_topping.get_topping() - 1])
+    # toppings.
+    print(new_hot_dog.get_hot_dog())
 
 
 menu()
