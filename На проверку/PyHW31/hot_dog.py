@@ -149,8 +149,10 @@ recipes_list.add_to_list(mexican_recipe.get_recipe())
 recipes_list.add_to_list(vegan_recipe.get_recipe())
 
 standart = ShowHotDog(standart_name.get_name(), standart_price.get_price(),
-                      standart_recipe.get_recipe(), standart_id.get_id())
-standart.show_id()
-standart.show_name()
-standart.show_recipe()
-standart.show_price()
+                              standart_recipe.get_recipe(), standart_id.get_id())
+
+mexican = ShowHotDog(mexican_name.get_name(), mexican_price.get_price(),
+                     mexican_recipe.get_recipe(), mexican_id.get_id())
+
+vegan = ShowHotDog(vegan_name.get_name(), vegan_price.get_price(),
+                           vegan_recipe.get_recipe(), vegan_id.get_id())

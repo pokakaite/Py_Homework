@@ -12,8 +12,9 @@ class Topping:
         self.name = name
 
 
-class ToppingAmount:
+class ToppingAmount(Topping):
     def __init__(self):
+        super().__init__()
         self.amount = None
 
     def set_amount(self, amount):
@@ -23,45 +24,41 @@ class ToppingAmount:
         return self.amount
 
 
-class TakeAmount(ToppingAmount):
-    def __init__(self):
-        super().__init__()
+class ShowTopping:
+    def __init__(self, name, amount, id):
+        self.name = name
+        self.amount = amount
+        self.id = id
 
-    def take_amount(self):
-        self.amount -= 1
+    def show_id(self):
+        print(f'Топпинг №{self.id}', end=' - ')
+
+    def show_name(self):
+        print(self.name)
+
+    def show_amount(self):
+        print(f'\tОстаток: {self.amount}.')
 
 
 
-onion = Topping()
+onion = ToppingAmount()
 onion.set_name('Лук')
+onion.set_amount(5)
 
-onion_amount = ToppingAmount()
-onion_amount.set_amount(5)
-
-jalapeno = Topping()
+jalapeno = ToppingAmount()
 jalapeno.set_name('Халапеньо')
+jalapeno.set_amount(5)
 
-jalapeno_amount = ToppingAmount()
-jalapeno_amount.set_amount(5)
-
-pickles = Topping()
+pickles = ToppingAmount()
 pickles.set_name('Маринованные огурцы')
+pickles.set_amount(5)
 
-pickles_amount = ToppingAmount()
-pickles_amount.set_amount(5)
-
-cheese = Topping()
+cheese = ToppingAmount()
 cheese.set_name('Сыр')
+cheese.set_amount(5)
 
-cheese_amount = ToppingAmount()
-cheese_amount.set_amount(5)
+show_onion = ShowTopping(onion.get_name(), onion.get_amount(), 1)
+show_jalapeno = ShowTopping(jalapeno.get_name(), jalapeno.get_amount(), 2)
+show_pickles = ShowTopping(pickles.get_name(), pickles.get_amount(), 3)
+show_cheese = ShowTopping(cheese.get_name(), cheese.get_amount(), 4)
 
-
-def list_making():
-    list = AddToList()
-    list.set_list()
-    list.add_to_list(onion.get_name())
-    list.add_to_list(jalapeno.get_name())
-    list.add_to_list(pickles.get_name())
-    list.add_to_list(cheese.get_name())
-    return list.get_list()
