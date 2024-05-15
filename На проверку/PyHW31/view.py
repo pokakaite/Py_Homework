@@ -1,133 +1,140 @@
-from model import *
-import copy
+import hot_dog, toppings
 
 
-class Recipes:
-    recipes = []
+class ShowHotDog:
+    def __init__(self, id, name, price, recipe):
+        self.id = id
+        self.name = name
+        self.price = price
+        self.recipe = recipe
 
-    def __init__(self, hot_dog):
-        self.hot_dog = hot_dog
-
-    def add_recipe(self):
-        Recipes.recipes.append(self.hot_dog)
-
-    def get_recipes(self):
-        return Recipes.recipes
-
-
-class ShowNames(Recipes):
-    def __init__(self):
-        super().__init__(self)
-
-    @staticmethod
-    def show_names():
-        count = 0
-        for recipe in Recipes.recipes:
-            count += 1
-            for n, name in recipe.items():
-                if n == 'Название':
-                    print(f'{count} - {name}')
-
-
-class ShowRecipes(Recipes):
-    def __init__(self):
-        super().__init__(self)
-
-    @staticmethod
-    def show():
-        count = 0
-        for recipe in Recipes.recipes:
-            count += 1
-            print(f'\nРецепт №{count}:')
-            for ingredient, name in recipe.items():
-                print(f'\t{ingredient} - {name}')
-
-
-class ShowIngredients:
-    def __init__(self, list_of_ingredients):
-        self.list = list_of_ingredients
     def show(self):
+        print(f'\n{self.id}. {self.name}:')
+        for ingredient in self.recipe:
+            print(f'\t\t{ingredient}')
+        print(f'Цена: {self.price} рублей.')
+
+
+show_standart = ShowHotDog(hot_dog.standart_id.get_id(),
+                           hot_dog.standart_name.get_name(),
+                           hot_dog.standart_price.get_price(),
+                           hot_dog.standart.get_hot_dog())
+
+show_mexican = ShowHotDog(hot_dog.mexican_id.get_id(),
+                          hot_dog.mexican_name.get_name(),
+                          hot_dog.mexican_price.get_price(),
+                          hot_dog.mexican.get_hot_dog())
+
+show_vegan = ShowHotDog(hot_dog.vegan_id.get_id(),
+                        hot_dog.vegan_name.get_name(),
+                        hot_dog.vegan_price.get_price(),
+                        hot_dog.vegan.get_hot_dog())
+
+
+class ChooseHotDog:
+    def __init__(self):
+        self.hot_dog = None
+
+    def choose_hot_dog(self):
+        self.hot_dog = int(input(f'''Какой хот-дог хотите попробовать?
+            1 - Стандартный,
+            2 - Мексиканский,
+            3 - Веганский
+            '''))
+
+    def get_hot_dog(self):
+        return self.hot_dog
+
+
+class ToppingsQuestion:
+    def toppings_question(self):
+        choice = int(input('''Желаете добавить топпинги?
+           1 - Да,
+           2 - Нет
+           '''))
+        return choice
+
+
+class ChooseTopping:
+    def __init__(self):
+        self.topping = None
+
+    def choose_topping(self):
+        toppings_list = toppings.list_making()
         count = 0
-        for ingredient in self.list:
+        for topping in toppings_list:
             count += 1
-            print(f'{count} - {ingredient}')
+            print(f'{count} - {topping}')
+        self.topping = int(input('Введите номер топпинга, который хотите добавить - '))
+
+    def get_topping(self):
+        return self.topping
 
 
-##menu
+class GetTopping:
+    def __init__(self):
+        self.topping = None
+
+    def get_topping(self, list, topping):
+        for i in list:
+            if i == list[topping - 1]:
+                self.topping = i
+                return self.topping
 
 
-standart_name = Standart()
-mexican_name = Mexican()
-vegan_name = Vegan()
+class AddTopping:
 
-wheat = Wheat()
-rye = Rye()
+    def add_topping(self, hot_dog, topping):
+        hot_dog.append(topping)
 
-milky_sausage = Milky()
-vegan_sausage = Vegan_Sausage()
 
-mayonaise = Mayo()
-ketchup = Ketchup()
-mustard = Mustard()
+class Greeting:
+    def greeting(self):
+        print(f'\nДобро пожаловать в киоск. Я знаю, вы хотите попробовать наши знаменитые хот-доги.\n'
+              f'Вы можете выбрать хот-дог из меню или создать свой.\n'
+              f'Наши хот-доги:')
 
-onion = Onion()
-jalapeno = Jalapeno()
-pickles = Pickles()
 
-def make_recipes():
-    recipe1 = HotDog(standart_name.get_name(), wheat.get_name(), milky_sausage.get_name(),
-                     ketchup.get_name(), onion.get_name())
-    standart = Recipes(recipe1.get_hot_dog())
-    standart.add_recipe()
-
-    recipe2 = HotDog(mexican_name.get_name(), wheat.get_name(), milky_sausage.get_name(),
-                     mustard.get_name(), jalapeno.get_name())
-    mexican = Recipes(recipe2.get_hot_dog())
-    mexican.add_recipe()
-
-    recipe3 = HotDog(vegan_name.get_name(), rye.get_name(), vegan_sausage.get_name(),
-                     ketchup.get_name(), pickles.get_name())
-    vegan = Recipes(recipe3.get_hot_dog())
-    vegan.add_recipe()
-make_recipes()
-
-def show_names():
-    ShowNames.show_names()
-
-def show_recipes():
-    ShowRecipes.show()
-
-def adding_to_lists():
-    standart_name.add_to_names()
-    mexican_name.add_to_names()
-    vegan_name.add_to_names()
-    wheat.add_to_buns()
-    rye.add_to_buns()
-    onion.add_to_toppings()
-    jalapeno.add_to_toppings()
-    pickles.add_to_toppings()
-    milky_sausage.add_to_sausages()
-    vegan_sausage.add_to_sausages()
-
-# def show_ingredients():
-#     list_names = RecipeName.names
-#     list_buns = Bun.buns
+class Choice:
+    def choice(self):
+        choice = int(input('''\nВыберите, что хотите сделать.
+        1 - Выбрать хот-дог из меню,
+        2 - Создать свой.\n'''))
+        return choice
 
 
 def menu():
-    print(f'\nДобро пожаловать в киоск. Я знаю, вы хотите попробовать наши знаменитые хот-доги.\n'
-          f'Вы можете выбрать хот-дог из меню или создать свой.\n'
-          f'Наши хот-доги:\n')
-    show_names()
-    show_recipes()
+    greeting = Greeting()
+    greeting.greeting()
 
-    choice = int(input('''\nВыберите, что хотите сделать.
-    1 - Выбрать хот-дог из меню,
-    2 - Создать свой.\n'''))
+    show_standart.show()
+    show_mexican.show()
+    show_vegan.show()
 
-    if choice == 2:
-        adding_to_lists()
+    choice = Choice()
+    choice.choice()
+
+    choose_hot_dog = ChooseHotDog()
+    choose_hot_dog.choose_hot_dog()
+
+    topping_question = ToppingsQuestion()
+    topping_question.toppings_question()
+
+    choose_topping = ChooseTopping()
+    choose_topping.choose_topping()
+
+    get_topping = GetTopping()
+
+    add_topping = AddTopping()
+    add_topping.add_topping(hot_dog.recipes_list.get_list()[choose_hot_dog.get_hot_dog() - 1],
+                            get_topping.get_topping(toppings.list_making(), choose_topping.get_topping()))
+    print(hot_dog.recipes_list.get_list())
+    print(hot_dog.standart_recipe())
+
+
+
+
+
+
 
 menu()
-
-
