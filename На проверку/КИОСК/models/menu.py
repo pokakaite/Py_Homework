@@ -73,9 +73,15 @@ class PayItem(Item):
 
 
 class ShowHotDogItems(Item):
-    def show(self, *items):
-        count = 0
+    items = []
+    def get_items(self, *items):
         for item in items:
+            ShowHotDogItems.items.append(item)
+
+    def show(self):
+        print()
+        count = 0
+        for item in ShowHotDogItems.items:
             count += 1
             print(f'{count} - ', end='')
             item.show()

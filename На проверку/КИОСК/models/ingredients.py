@@ -132,9 +132,15 @@ class JalapenoIngredient(Ingredients):
 
 
 class ShowIngredients(Ingredients):
-    def show(self, *items):
-        count = 0
+    items = []
+    def get_items(self, *items):
         for item in items:
+            ShowIngredients.items.append(item)
+
+    def show(self):
+        print()
+        count = 0
+        for item in ShowIngredients.items:
             count += 1
             print(f'{count} - ', end='')
             item.show()
