@@ -1,3 +1,5 @@
+# произведение количества на цену ингредентов
+
 class Calc:
     def __init__(self):
         self.result = 0

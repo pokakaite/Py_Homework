@@ -1,19 +1,11 @@
 from abc import abstractmethod
 
 
-class Greeting:
-    def __init__(self):
-        self.choice = None
-
-    def greeting(self):
-        print('''Добро пожаловать в киоск по продаже хот-догов.
-        Вы можете выбрать из трёх стандартных хот-догов или создать свой.
-        1 - Выбрать из стандартных.
-        2 - Создать свой.''')
-        self.choice = int(input('Ваш выбор - '))
-
-    def get_choice(self):
-        return self.choice
+# приветствие
+# вывод общей информации о хот-догах стандартных и самодельном.
+# вывод оплата картой
+# вывод оплата наличными
+# менюшка ??
 
 
 class Item:
@@ -23,7 +15,7 @@ class Item:
         pass
 
 
-class StandartHotDog_Item(Item):
+class StandartHotDogItem(Item):
     def __init__(self, data):
         self.name = data.name
         self.price = data.price
@@ -32,7 +24,7 @@ class StandartHotDog_Item(Item):
         print(f'{self.name}. Стоимость - {self.price} рублей.')
 
 
-class HandMade_HotDog_Item(Item):
+class HandMadeHotDogItem(Item):
     def __init__(self, data):
         self.name = data.name
         self.price = data.price
@@ -46,6 +38,11 @@ class HandMade_HotDog_Item(Item):
         st += '. '
         st += f"Стоимость - {self.price} рублей."
         print(st)
+
+
+class ChosenHotDog:
+    def get_chosen_hot_dog(self, choice, data):
+        return data[choice - 1]
 
 
 class CashPayItem(Item):
@@ -75,7 +72,7 @@ class PayItem(Item):
         return
 
 
-class Menu(Greeting, Item):
+class ShowHotDogItems(Item):
     def show(self, *items):
         count = 0
         for item in items:

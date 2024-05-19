@@ -1,14 +1,22 @@
 from abc import abstractmethod
 
 
+# информация о цене и количестве ингредиентов. вывод информации.
+# менюшка для вывода по очереди.
+
 class Ingredients:
     def __init__(self):
         self.name = None
         self.price = None
         self.amount = None
 
+    @abstractmethod
     def show(self):
-        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
+        pass
+
+    @abstractmethod
+    def add(self):
+        pass
 
 
 class BunIngredient(Ingredients):
@@ -17,6 +25,9 @@ class BunIngredient(Ingredients):
         self.name = 'Булочка'
         self.price = 10
         self.amount = 1
+
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
 
     def add(self):
         self.amount += 1
@@ -29,6 +40,9 @@ class SausageIngredient(Ingredients):
         self.price = 20
         self.amount = 1
 
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
+
     def add(self):
         self.amount += 1
 
@@ -39,6 +53,9 @@ class VeganSausageIngredient(Ingredients):
         self.name = 'Соевая сосиска'
         self.price = 40
         self.amount = 1
+
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
 
     def add(self):
         self.amount += 1
@@ -51,6 +68,9 @@ class KetchupIngredient(Ingredients):
         self.price = 10
         self.amount = 1
 
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
+
     def add(self):
         self.amount += 1
 
@@ -61,6 +81,9 @@ class MustardIngredient(Ingredients):
         self.name = 'Горчица'
         self.price = 10
         self.amount = 1
+
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
 
     def add(self):
         self.amount += 1
@@ -73,6 +96,9 @@ class PickleIngredient(Ingredients):
         self.price = 10
         self.amount = 1
 
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
+
     def add(self):
         self.amount += 1
 
@@ -84,6 +110,9 @@ class OnionIngredient(Ingredients):
         self.price = 10
         self.amount = 1
 
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
+
     def add(self):
         self.amount += 1
 
@@ -94,6 +123,9 @@ class JalapenoIngredient(Ingredients):
         self.name = 'Халапеньо'
         self.price = 20
         self.amount = 1
+
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
 
     def add(self):
         self.amount += 1
