@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1939e34-3541-4497-a470-5b8a5ef3309f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ReadMe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/choices.py" afterDir="false" />
@@ -31,19 +32,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.choices.executor": "Run",
-    "Python.hot_dog.executor": "Run",
-    "Python.ingredients.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.menu.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/kathe/Documents/Python/Py_Homework/На проверку/КИОСК"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.choices.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hot_dog.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ingredients.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.menu.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kathe/Documents/Python/Py_Homework/На проверку/КИОСК&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.main">
     <configuration name="choices" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="КИОСК" />
@@ -158,9 +159,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.ingredients" />
         <item itemvalue="Python.choices" />
         <item itemvalue="Python.menu" />
-        <item itemvalue="Python.ingredients" />
         <item itemvalue="Python.hot_dog" />
       </list>
     </recent_temporary>

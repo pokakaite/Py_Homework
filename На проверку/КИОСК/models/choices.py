@@ -23,7 +23,7 @@ def choose_between(items, choice):
 
 def add_topping(hot_dogs, hot_dog, ingredients, choice):
         hot_dogs[hot_dog - 1].add_ingredients(ingredients[choice - 1])
-        hot_dogs[hot_dog - 1].show()
+        # hot_dogs[hot_dog - 1].show()
 
 
 class Choice:
@@ -75,6 +75,28 @@ class AskForTopping:
 class ChooseTopping:
     def set_choice(self):
         self.choice = int(input('\nВведите номер топпинга, который хотите добавить - '))
+
+    def get_choice(self):
+        return self.choice
+
+
+class ContinueToppings:
+    def set_choice(self):
+        print('''\nЖелаете продолжить добавлять топпинги?
+        1 - Да
+        2 - Нет''')
+        self.choice = int(input('Ваш выбор - '))
+
+    def get_choice(self):
+        return self.choice
+
+
+class ContinueHotDogs:
+    def set_choice(self):
+        print('''\nЖелаете заказать еще хот-дог?
+        1 - Да
+        2 - Нет''')
+        self.choice = int(input('Ваш выбор - '))
 
     def get_choice(self):
         return self.choice

@@ -45,6 +45,11 @@ class ChosenHotDog:
         return data[choice - 1]
 
 
+class ShowOrder:
+    def show(self):
+        print('\nВаш заказ:')
+
+
 class CashPayItem(Item):
     def __init__(self, price):
         self.price = price
@@ -85,3 +90,18 @@ class ShowHotDogItems(Item):
             count += 1
             print(f'{count} - ', end='')
             item.show()
+
+
+order_items = []
+class ShowOrderItems:
+    def get_items(self, *items):
+        for item in items:
+            order_items.append(item)
+
+    def show(self):
+        print()
+        count = 0
+        for item in order_items:
+            count += 1
+            print(f'{count} - ', end='')
+            print(item)

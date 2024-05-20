@@ -18,14 +18,13 @@ class HotDog:
         pass
 
 
-
 class StandartHotDog:
     def __init__(self):
         self.name = 'Стандартный хот-дог'
         self.price = None
 
-    def ingredients(self, bun, ketchup, sausage):
-        self.ingredients = [bun, ketchup, sausage]
+    def ingredients(self, bun, ketchup, mayonaise, sausage):
+        self.ingredients = [bun, ketchup, mayonaise, sausage]
 
     def show(self):
         st = f'{self.name}. Состав: '
@@ -34,15 +33,18 @@ class StandartHotDog:
         st = st[:-2]
         st += '.'
         st += f'\nСтоимость: {self.price}'
-        print(f'\n{st}')
+        print(f'{st}')
 
     def add_ingredients(self, item):
         self.ingredients.append(item)
 
 
 class VeganHotDog:
-    def __init__(self, bun, ketchup, vegan_sausage):
+    def __init__(self):
         self.name = 'Веганский хот-дог'
+        self.price = None
+
+    def ingredients(self, bun, ketchup, vegan_sausage):
         self.ingredients = [bun, ketchup, vegan_sausage]
 
     def show(self):
@@ -51,16 +53,19 @@ class VeganHotDog:
             st += f'{ingredient.name}, '
         st = st[:-2]
         st += '.'
-        st += f'\nСтоимость: '
-        print(f'\n{st}')
+        st += f'\nСтоимость: {self.price}'
+        print(f'{st}')
 
     def add_ingredients(self, item):
         self.ingredients.append(item)
 
 
 class SpicyHotDog:
-    def __init__(self, bun, mustard, sausage, jalapeno):
+    def __init__(self):
         self.name = 'Острый хот-дог'
+        self.price = None
+
+    def ingredients(self, bun, mustard, sausage, jalapeno):
         self.ingredients = [bun, mustard, sausage, jalapeno]
 
     def show(self):
@@ -69,8 +74,8 @@ class SpicyHotDog:
             st += f'{ingredient.name}, '
         st = st[:-2]
         st += '.'
-        st += f'\nСтоимость: '
-        print(f'\n{st}')
+        st += f'\nСтоимость: {self.price}'
+        print(f'{st}')
 
     def add_ingredients(self, item):
         self.ingredients.append(item)
@@ -87,8 +92,8 @@ class HandMadeHotDog:
             st += f'{ingredient.name}, '
         st = st[:-2]
         st += '.'
-        st += f'\nСтоимость: '
-        print(f'\n{st}')
+        st += f'\nСтоимость: {self.price}'
+        print(f'{st}')
 
     def add_ingredients(self, item):
         self.ingredients.append(item)

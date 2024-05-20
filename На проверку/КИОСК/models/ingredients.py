@@ -89,6 +89,21 @@ class MustardIngredient(Ingredients):
         self.amount += 1
 
 
+class MayonaiseIngredient(Ingredients):
+    def __init__(self):
+        super().__init__()
+        self.name = 'Майонез'
+        self.price = 10
+        self.amount = 1
+
+    def show(self):
+        print(f'{self.name} - {self.price} руб. ({self.amount} порция)')
+
+    def add(self):
+        self.amount += 1
+
+
+
 class PickleIngredient(Ingredients):
     def __init__(self):
         super().__init__()
