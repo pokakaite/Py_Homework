@@ -13,7 +13,6 @@ def make_dict(a=None, b=None, c=None, d=None, e=None):
     }
     return items
 
-
 def choose_between(items, choice):
     try:
         return items.get(choice)()
@@ -21,9 +20,21 @@ def choose_between(items, choice):
         print('')
 
 
+def choose_between_hot_dogs(items, choice):
+    try:
+        return items.get(choice)
+    except:
+        print('')
+
+
+order_items = []
+def add_to_order(item):
+    order_items.append({item.name: item.price})
+
+
 def add_topping(hot_dogs, hot_dog, ingredients, choice):
         hot_dogs[hot_dog - 1].add_ingredients(ingredients[choice - 1])
-        # hot_dogs[hot_dog - 1].show()
+        hot_dogs[hot_dog - 1].show()
 
 
 class Choice:

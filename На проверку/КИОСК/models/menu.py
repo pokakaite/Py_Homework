@@ -1,13 +1,6 @@
 from abc import abstractmethod
 
 
-# приветствие
-# вывод общей информации о хот-догах стандартных и самодельном.
-# вывод оплата картой
-# вывод оплата наличными
-# менюшка ??
-
-
 class Item:
 
     @abstractmethod
@@ -78,30 +71,17 @@ class PayItem(Item):
 
 
 class ShowHotDogItems(Item):
-    items = []
+    def __init__(self):
+        self.items = []
+
     def get_items(self, *items):
         for item in items:
-            ShowHotDogItems.items.append(item)
+            self.items.append(item)
 
     def show(self):
         print()
         count = 0
-        for item in ShowHotDogItems.items:
+        for item in self.items:
             count += 1
             print(f'{count} - ', end='')
             item.show()
-
-
-order_items = []
-class ShowOrderItems:
-    def get_items(self, *items):
-        for item in items:
-            order_items.append(item)
-
-    def show(self):
-        print()
-        count = 0
-        for item in order_items:
-            count += 1
-            print(f'{count} - ', end='')
-            print(item)

@@ -85,6 +85,7 @@ class HandMadeHotDog:
     def __init__(self, bun, sausage):
         self.name = 'Сделай сам хот-дог'
         self.ingredients = [bun, sausage]
+        self.price = None
 
     def show(self):
         st = f'{self.name}. Состав: '
