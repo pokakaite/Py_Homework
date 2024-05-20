@@ -38,9 +38,57 @@ class ChosenHotDog:
         return data[choice - 1]
 
 
-class ShowOrder:
+class Order:
+    def __init__(self):
+        self.order_items = []
+
+    def add_to_order(self, item):
+        self.order_items.append({item.name: item.price})
+
     def show(self):
         print('\nВаш заказ:')
+        count = 0
+        for hot_dog in self.order_items:
+            count += 1
+            for name, price in hot_dog.items():
+                print(f'{count} - {name} - {price} рублей.')
+        if len(self.order_items) >= 3 and len(self.order_items) <= 5:
+            print('Ваша скидка - 10%')
+        elif len(self.order_items) >= 5 and len(self.order_items) <= 7:
+            print('Ваша скидка - 15%')
+        elif len(self.order_items) >= 7:
+            print('Ваша скидка - 20%')
+
+
+class Pay:
+    def __init__(self):
+        self.sum = []
+
+    def add_to_sum(self, items):
+        for hot_dog in items:
+            for name, price in hot_dog.items():
+                self.sum.append(price)
+
+    def show(self, items):
+        if len(items) >= 3 and len(items) <= 5:
+            summ = sum(self.sum) - (sum(self.sum) * 0.1)
+            print(f'\nСумма заказа - {summ} рублей.')
+        elif len(items) >= 5 and len(items) <= 7:
+            summ = sum(self.sum) - (sum(self.sum) * 0.15)
+            print(f'\nСумма заказа - {summ} рублей.')
+        elif len(items) >= 7:
+            summ = sum(self.sum) - (sum(self.sum) * 0.2)
+            print(f'\nСумма заказа - {summ} рублей.')
+        else:
+            summ = sum(self.sum)
+            print(f'\nСумма заказа - {summ} рублей.')
+
+class AddToFile:
+    def add_to_file(self, order_items):
+        with open('file.txt', 'w+', encoding='utf-8') as f:
+            for hot_dog in order_items:
+                for name, price in hot_dog.items():
+                    f.write(f'{name} - {price} рублей.\n')
 
 
 class CashPayItem(Item):
@@ -63,11 +111,6 @@ class CardPayItem(Item):
 class PayShowItem(Item):
     def show(self):
         print(f'Способ оплаты:')
-
-
-class PayItem(Item):
-    def show(self):
-        return
 
 
 class ShowHotDogItems(Item):

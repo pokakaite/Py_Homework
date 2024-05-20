@@ -27,10 +27,6 @@ def choose_between_hot_dogs(items, choice):
         print('')
 
 
-order_items = []
-def add_to_order(item):
-    order_items.append({item.name: item.price})
-
 
 def add_topping(hot_dogs, hot_dog, ingredients, choice):
         hot_dogs[hot_dog - 1].add_ingredients(ingredients[choice - 1])
