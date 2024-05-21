@@ -3,7 +3,11 @@ from abc import abstractmethod
 
 class Greeting:
     def show(self):
-        print('Наши пончики:')
+        print('\nДобро пожаловать в пекарню. Я знаю, вы желаете попробовать наши знаменитые пончики.')
+        print('На выбор можем предложить:\n')
+
+
+# приветствие
 
 
 class Item:
@@ -12,11 +16,29 @@ class Item:
         pass
 
 
+# абстрактный класс для элементов ассортимента
+
+
 class DonutItem:
     def __init__(self, donut):
         self.donut = donut
+
     def show(self):
-        print(f'{self.donut.name} - {self.donut.price} рублей.')
+        print(f'{self.donut.name} - {self.donut.price + sum(self.donut.topping_price)} рублей.')
+
+
+# класс для обычных пончиков-элементов ассортимента
+
+class HandMadeDonutItem:
+    def __init__(self, donut):
+        self.donut = donut
+
+    def show(self):
+        print(f'{self.donut.name} - {self.donut.price + sum(self.donut.topping_price)} рублей '
+              f'(Цена меняется в зависимости от посыпок).')
+
+
+# класс для самодельного пончика-элемента ассортимента
 
 
 class ListItems:
@@ -30,11 +52,20 @@ class ListItems:
         return self.list
 
 
+# класс для создания списка элементов ассортимента
+
 
 class ShowItems:
-    def show(self, items):
-        count = 0
-        for item in items:
-            count += 1
+    items = None
+
+    @staticmethod
+    def set_list(items):
+        ShowItems.items = items
+
+    @staticmethod
+    def show():
+        for count, item in enumerate(ShowItems.items, start=1):
             print(f'{count} - ', end='')
             item.show()
+
+# вывод элементов ассортимента
