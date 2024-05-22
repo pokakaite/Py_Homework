@@ -32,9 +32,9 @@ class BasicDonat(Donut):
 
 
     def show_toppings(self):
-        print('Состав:\nПончик,\n\tТоппинги:')
+        print('\tСостав:\n\t1. Пончик,\n\t2. Топпинги:')
         for count, topping in enumerate(self.toppings, start=1):
-            print(f'\t{count}. {topping}.')
+            print(f'\t\t{count}. {topping}.')
 
 
 class ChocoDonut(Donut):
@@ -53,10 +53,9 @@ class ChocoDonut(Donut):
         self.topping_price.append(topping.price)
 
     def show_toppings(self):
-        print('Состав:\nПончик,\n\tТоппинги:')
+        print('\tСостав:\n\t1. Пончик,\n\t2. Топпинги:')
         for count, topping in enumerate(self.toppings, start=1):
-            print(f'\t{count}. {topping}.')
-
+            print(f'\t\t{count}. {topping}.')
 
 class HandMadeDonut(Donut):
     def __init__(self):
@@ -74,6 +73,6 @@ class HandMadeDonut(Donut):
         self.topping_price.append(topping.price)
 
     def show_toppings(self):
-        print('Состав:\nПончик,\n\tТоппинги:')
+        print('\tСостав:\n\t1. Пончик,\n\t2. Топпинги:')
         for count, topping in enumerate(self.toppings, start=1):
-            print(f'\t{count}. {topping}.')
+            print(f'\t\t{count}. {topping}.')

@@ -58,3 +58,34 @@ class WhichTopping:
     @staticmethod
     def get_choice():
         return WhichTopping.choice
+
+
+class IfDonut:
+    choice = None
+
+    @staticmethod
+    def set_choice():
+        print('''\nЖелаете попробовать ещё один пончик?
+        1 - Да
+        2 - Нет''')
+        IfDonut.choice = int(input('Ваш выбор - '))
+
+    @staticmethod
+    def get_choice():
+        return IfDonut.choice
+
+
+class PayChoice:
+    choice = None
+
+    @staticmethod
+    def set_choice():
+        print('''Выберите способ оплаты.
+        1 - Наличный расчёт.
+        2 - Расчёт по карте.
+        ''')
+        PayChoice.choice = int(input('Ваш выбор - '))
+
+    @staticmethod
+    def get_choice():
+        return PayChoice.choice
