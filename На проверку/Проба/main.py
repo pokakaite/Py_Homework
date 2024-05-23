@@ -1,13 +1,19 @@
 from models import *
 import copy
 
+sales = SalesFile()
+calc_income = CalcIncome()
+orders_summ = OrdersSumm()
+
 def order():
     order_list = OrderList()
     calc = Calc()
     calc_order = CalculateOrder()
     show_order_summ = ShowOrderSumm()
-    file = File()
+    check = Check()
+
     refill = RefillTopping()
+    choice = Choice()
 
     sugar = Sugar()
     choco_glaze = ChocolateGlaze()
@@ -27,21 +33,13 @@ def order():
     hand_made_donut = HandMadeDonut()
     # пончики и их составы
 
-
-    basic_donut_item = DonutItem(basic_donut)
-    choco_donut_item = DonutItem(choco_donut)
-    simpsons_donut_item = DonutItem(simpsons_donut)
-    hand_made_donut_item = HandMadeDonutItem(hand_made_donut)
-    # пончики как элементы ассортимента (для вывода в меню)
+    basic_donut.price = calc.calculate(basic_donut)
+    choco_donut.price = calc.calculate(choco_donut)
+    simpsons_donut.price = calc.calculate(simpsons_donut)
+    hand_made_donut.price = calc.calculate(hand_made_donut)
 
     donuts_list = [basic_donut, choco_donut, simpsons_donut, hand_made_donut]
-
-    donuts_list_item = ListItems()
-    donuts_list_item.add_to_list(basic_donut_item)
-    donuts_list_item.add_to_list(choco_donut_item)
-    donuts_list_item.add_to_list(simpsons_donut_item)
-    donuts_list_item.add_to_list(hand_made_donut_item)
-    show_donuts = ShowItems(donuts_list_item.get_list())
+    show_donuts = ShowItems(donuts_list)
     # список пончиков (для вывода в меню)
 
     toppings_list_items = ListItems()
@@ -86,17 +84,29 @@ def order():
             else:
                 order_list.show()
                 show_order_summ.show(calc_order.get_order_summ(order_list.get_order()))
-                file.add_to_file(order_list.get_order())
+                check.add_to_check(order_list.get_order())
 
                 PayChoice.set_choice()
-                IfMoreOrder.set_choice()
-                if IfMoreOrder.get_choice() == 1:
-                    return order()
-                if IfMoreOrder.get_choice() == 2:
-                    topping_amount.show()
-                if IfMoreOrder.get_choice() == 4:
-                    pass
+                Wish.show()
+
     start()
+
+    calc_income.calculate_income(calc_order.get_order_summ(order_list.get_order()))
+    calc_income.calculate_revenue(calc_order.get_order_summ(order_list.get_order()))
+    sales.add_to_file(check.get_check(), calc_income.revenue, calc_income.income)
+
+    def menu_for_employee():
+        IfMoreOrder.set_choice()
+        choice.make_choice(IfMoreOrder.get_choice(),
+                           order,
+                           topping_amount.show,
+                           sales.show,
+                           print)
+        if IfMoreOrder.get_choice() == 4:
+            pass
+        else:
+            return menu_for_employee()
+    menu_for_employee()
 
 
 

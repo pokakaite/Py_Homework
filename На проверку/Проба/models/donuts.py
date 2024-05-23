@@ -28,7 +28,7 @@ class BasicDonat(Donut):
 
 
     def show(self):
-        print(f'\nНазвание - {self.name}. Стоимость - {self.price} рублей.')
+        print(f'{self.name}. Стоимость - {self.price} рублей.')
 
     def add_topping(self, topping):
         self.toppings.append(topping.name)
@@ -57,7 +57,7 @@ class ChocoDonut(Donut):
 
 
     def show(self):
-        print(f'\nНазвание - {self.name}. Стоимость - {self.price} рублей.')
+        print(f'{self.name}. Стоимость - {self.price} рублей.')
 
     def add_topping(self, topping):
         self.toppings.append(topping.name)
@@ -78,13 +78,13 @@ class ChocoDonut(Donut):
 class SimpsonsDonut(Donut):
     def __init__(self):
         self.name = 'Пончик "Из Симпсонов"'
-        self.price = 15
+        self.price = 10
         self.toppings = []
         self.topping_price = []
 
 
     def show(self):
-        print(f'\nНазвание - {self.name}. Стоимость - {self.price} рублей.')
+        print(f'{self.name}. Стоимость - {self.price} рублей.')
 
     def add_topping(self, topping):
         self.toppings.append(topping.name)
@@ -110,7 +110,7 @@ class HandMadeDonut(Donut):
 
 
     def show(self):
-        print(f'\nНазвание - {self.name}. Стоимость - {self.price} рублей.')
+        print(f'{self.name}. Стоимость - {self.price} рублей.')
 
     def add_topping(self, topping):
         self.toppings.append(topping.name)

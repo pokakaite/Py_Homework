@@ -1,3 +1,16 @@
+class Choice:
+    def make_choice(self, choice, func1, func2, func3, func4):
+        match choice:
+            case 1:
+                func1()
+            case 2:
+                func2()
+            case 3:
+                func3()
+            case 4:
+                func4()
+
+
 class WhichDonut:
     choice = None
 
@@ -71,7 +84,8 @@ class IfMoreOrder:
 
     @staticmethod
     def set_choice():
-        print('''Выберите, что хотите сделать
+        print('''Выберите, что хотите сделать.
+        
         1 - Принять еще заказ.
         2 - Посмотреть информацию об остатках продуктов.
         3 - Посмотреть информацию о проданных пончиках, прибыль, выручку.

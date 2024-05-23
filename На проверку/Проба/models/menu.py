@@ -88,6 +88,7 @@ class ToppingAmount:
                 print(f'Топпинга "{topping.name}" осталось {topping.amount} штук(и). Нужно пополнить запасы.\n')
 
     def show(self):
+        print()
         for topping in self.toppings:
             print(f'Топпинга "{topping.name}" осталось {topping.amount} штук(и).')
             if topping.amount <= 3:
@@ -109,6 +110,7 @@ class RefillTopping:
         if choice == 1 and topping.amount <= 3:
             topping.amount += 3
             print(f'Запасы топпинга "{topping.get_name()}" успешно пополнены :)')
+
 
 class Order_Item:
     def __init__(self, item):
@@ -139,19 +141,59 @@ class ShowOrderSumm:
         print(f'Стоимость заказа - {summ} рублей.')
 
 
-class File:
+class Check:
     def __init__(self):
         self.name = 'check.txt'
 
-    def add_to_file(self, order):
+    def add_to_check(self, order):
+        self.order = order
         with open(self.name, 'w+', encoding='utf-8') as f:
-            for count, item in enumerate(order, start=1):
+            for count, item in enumerate(self.order, start=1):
                 f.write(str(f'{count}. {item.get_info()}\n'))
             f.close()
 
+    def get_check(self):
+        with open(self.name, 'r+', encoding='utf-8') as f:
+            self.info = f.read()
+            f.close()
+            return self.info
+
+
+class OrdersSumm:
+    def __init__(self):
+        self.orders_summ = []
+
+    def add_to_orders_summ(self, order_summ):
+        self.orders_summ.append(order_summ)
+
+    def get_orders_summ(self):
+        return self.orders_summ
+
+class SalesFile:
+    def __init__(self):
+        self.name = 'sales.txt'
+        self.count = 0
+
+    def add_to_file(self, order, income, revenue):
+        with open(self.name, 'a+', encoding='utf-8') as f:
+            self.count += 1
+            f.write(str(f'\t\tЗаказ №{self.count}:\n'))
+            f.write(str(order))
+            f.write(str(f'Выручка: {revenue}\n'))
+            f.write(str(f'Прибыль: {income}\n\n'))
+            f.close()
+
+    def show(self):
+        with open(self.name, 'r+', encoding='utf-8') as f:
+            self.info = f.read()
+            print(self.info)
+
 
 class Wish:
-    def show(self):
-        print('Оплата прошла успешно. Приятного аппетита.')
+
+    @staticmethod
+    def show():
+        print('\nОплата прошла успешно. Приятного аппетита.\n')
+
 
 

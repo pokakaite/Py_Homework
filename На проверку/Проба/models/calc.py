@@ -18,3 +18,17 @@ class CalculateOrder:
             return sum(list_prices) - sum(list_prices) * 0.1
         else:
             return sum(list_prices)
+
+
+class CalcIncome:
+    def __init__(self):
+        self.income = None
+        self.revenue = None
+
+    def calculate_revenue(self, orders_summ):
+        self.revenue = orders_summ
+        return self.revenue
+
+    def calculate_income(self, orders_summ):
+        self.income = orders_summ - orders_summ * 0.5
+        return self.income
