@@ -1,12 +1,20 @@
-class CalculateOrder:
+class Calc:
     def __init__(self):
-        self.order_summ = []
+        self.result = 0
 
-    def add_to_order_summ(self, donut_price):
-        self.order_summ.append(donut_price)
+    def calculate(self, item):
+        item.price = 10
+        self.result = item.price + sum(item.topping_price)
+        return self.result
 
-    def get_order_summ(self):
-        if len(self.order_summ) >= 3:
-            return sum(self.order_summ) - sum(self.order_summ) * 0.1
+
+class CalculateOrder:
+    def get_order_summ(self, order_items):
+        list_prices = []
+        for item in order_items:
+            list_prices.append(item.price)
+
+        if len(list_prices) >= 3:
+            return sum(list_prices) - sum(list_prices) * 0.1
         else:
-            return sum(self.order_summ)
+            return sum(list_prices)

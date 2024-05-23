@@ -1,25 +1,3 @@
-class ChoiceMaking:
-    def make_choice(self, choice, func1=None, func2=None, func3=None):
-        match choice:
-            case 1:
-                func1()
-            case 2:
-                func2()
-            case 3:
-                func3()
-
-
-class ChoiceMaking2:
-    def make_choice(self, choice, item, func1=None, func2=None, func3=None):
-        match choice:
-            case 1:
-                func1(item)
-            case 2:
-                func2(item)
-            case 3:
-                func3(item)
-
-
 class WhichDonut:
     choice = None
 
@@ -37,7 +15,7 @@ class IfToppings:
 
     @staticmethod
     def set_choice():
-        print('''\nЖелаете добавить топпинг?
+        print('''Желаете добавить топпинг?
         1 - Да
         2 - Нет''')
         IfToppings.choice = int(input('Ваш выбор - '))
@@ -52,7 +30,7 @@ class WhichTopping:
 
     @staticmethod
     def set_choice():
-        print('\nВведите номер топпинга, который хотите добавить.')
+        print('Введите номер топпинга, который хотите добавить.')
         WhichTopping.choice = int(input('Ваш выбор - '))
 
     @staticmethod
@@ -80,12 +58,27 @@ class PayChoice:
 
     @staticmethod
     def set_choice():
-        print('''Выберите способ оплаты.
-        1 - Наличный расчёт.
-        2 - Расчёт по карте.
-        ''')
+        print('''\nВыберите способ оплаты.\n1 - Наличный расчёт.\n2 - Расчёт по карте.''')
         PayChoice.choice = int(input('Ваш выбор - '))
 
     @staticmethod
     def get_choice():
         return PayChoice.choice
+
+
+class IfMoreOrder:
+    choice = None
+
+    @staticmethod
+    def set_choice():
+        print('''Выберите, что хотите сделать
+        1 - Принять еще заказ.
+        2 - Посмотреть информацию об остатках продуктов.
+        3 - Посмотреть информацию о проданных пончиках, прибыль, выручку.
+        4 - Выйти.
+        ''')
+        IfMoreOrder.choice = int(input('Ваш выбор - '))
+
+    @staticmethod
+    def get_choice():
+        return IfMoreOrder.choice

@@ -14,6 +14,10 @@ class Donut:
     def show_toppings(self):
         pass
 
+    @abstractmethod
+    def get_info(self):
+        pass
+
 
 class BasicDonat(Donut):
     def __init__(self):
@@ -24,7 +28,7 @@ class BasicDonat(Donut):
 
 
     def show(self):
-        print(f'\nНазвание - {self.name}. Стоимость - {self.price + sum(self.topping_price)} рублей.')
+        print(f'\nНазвание - {self.name}. Стоимость - {self.price} рублей.')
 
     def add_topping(self, topping):
         self.toppings.append(topping.name)
@@ -35,6 +39,13 @@ class BasicDonat(Donut):
         print('\tСостав:\n\t1. Пончик,\n\t2. Топпинги:')
         for count, topping in enumerate(self.toppings, start=1):
             print(f'\t\t{count}. {topping}.')
+        print()
+
+    def get_info(self):
+        return f'''Название - {self.name}. Стоимость - {self.price} рублей.
+        Состав:\n\t1. Пончик,\n\t2. Топпинги:
+        {[i for i in self.toppings]}\n'''
+
 
 
 class ChocoDonut(Donut):
@@ -46,7 +57,7 @@ class ChocoDonut(Donut):
 
 
     def show(self):
-        print(f'\nНазвание - {self.name}. Стоимость - {self.price + sum(self.topping_price)} рублей.')
+        print(f'\nНазвание - {self.name}. Стоимость - {self.price} рублей.')
 
     def add_topping(self, topping):
         self.toppings.append(topping.name)
@@ -56,6 +67,39 @@ class ChocoDonut(Donut):
         print('\tСостав:\n\t1. Пончик,\n\t2. Топпинги:')
         for count, topping in enumerate(self.toppings, start=1):
             print(f'\t\t{count}. {topping}.')
+        print()
+
+    def get_info(self):
+        return f'''Название - {self.name}. Стоимость - {self.price} рублей.
+        Состав:\n\t1. Пончик,\n\t2. Топпинги:
+        {[i for i in self.toppings]}\n'''
+
+
+class SimpsonsDonut(Donut):
+    def __init__(self):
+        self.name = 'Пончик "Из Симпсонов"'
+        self.price = 15
+        self.toppings = []
+        self.topping_price = []
+
+
+    def show(self):
+        print(f'\nНазвание - {self.name}. Стоимость - {self.price} рублей.')
+
+    def add_topping(self, topping):
+        self.toppings.append(topping.name)
+        self.topping_price.append(topping.price)
+
+    def show_toppings(self):
+        print('\tСостав:\n\t1. Пончик,\n\t2. Топпинги:')
+        for count, topping in enumerate(self.toppings, start=1):
+            print(f'\t\t{count}. {topping}.')
+        print()
+
+    def get_info(self):
+        return f'''Название - {self.name}. Стоимость - {self.price} рублей.
+        Состав:\n\t1. Пончик,\n\t2. Топпинги:
+        {[i for i in self.toppings]}\n'''
 
 class HandMadeDonut(Donut):
     def __init__(self):
@@ -66,7 +110,7 @@ class HandMadeDonut(Donut):
 
 
     def show(self):
-        print(f'\nНазвание - {self.name}. Стоимость - {self.price + sum(self.topping_price)} рублей.')
+        print(f'\nНазвание - {self.name}. Стоимость - {self.price} рублей.')
 
     def add_topping(self, topping):
         self.toppings.append(topping.name)
@@ -76,3 +120,9 @@ class HandMadeDonut(Donut):
         print('\tСостав:\n\t1. Пончик,\n\t2. Топпинги:')
         for count, topping in enumerate(self.toppings, start=1):
             print(f'\t\t{count}. {topping}.')
+        print()
+
+    def get_info(self):
+        return f'''Название - {self.name}. Стоимость - {self.price} рублей.
+        Состав:\n\t1. Пончик,\n\t2. Топпинги:
+        {[i for i in self.toppings]}\n'''
