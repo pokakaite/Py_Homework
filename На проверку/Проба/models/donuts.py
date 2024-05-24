@@ -110,7 +110,7 @@ class HandMadeDonut(Donut):
 
 
     def show(self):
-        print(f'{self.name}. Стоимость - {self.price} рублей.')
+        print(f'{self.name}. Стоимость - {self.price} рублей (Цена меняется в зависимости от топпингов).')
 
     def add_topping(self, topping):
         self.toppings.append(topping.name)

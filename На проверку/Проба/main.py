@@ -4,16 +4,16 @@ import copy
 sales = SalesFile()
 calc_income = CalcIncome()
 orders_summ = OrdersSumm()
+show_order_summ = ShowOrderSumm()
+refill = RefillTopping()
+choice = Choice()
+
 
 def order():
     order_list = OrderList()
     calc = Calc()
     calc_order = CalculateOrder()
-    show_order_summ = ShowOrderSumm()
     check = Check()
-
-    refill = RefillTopping()
-    choice = Choice()
 
     sugar = Sugar()
     choco_glaze = ChocolateGlaze()
@@ -25,6 +25,7 @@ def order():
     # топпинги и их цена
 
     basic_donut = BasicDonat()
+    basic_donut.add_topping(sugar)
     choco_donut = ChocoDonut()
     choco_donut.add_topping(choco_glaze)
     simpsons_donut = SimpsonsDonut()
@@ -48,9 +49,7 @@ def order():
     toppings_list_items.add_to_list(strawberry_glaze)
     toppings_list_items.add_to_list(sprinkles)
     show_toppings = ShowItems(toppings_list_items.get_list())
-
     # список топпингов (для вывода в меню)
-
 
     Greeting.show()
 
@@ -93,7 +92,7 @@ def order():
 
     calc_income.calculate_income(calc_order.get_order_summ(order_list.get_order()))
     calc_income.calculate_revenue(calc_order.get_order_summ(order_list.get_order()))
-    sales.add_to_file(check.get_check(), calc_income.revenue, calc_income.income)
+    sales.add_to_file(check.get_check(), calc_income.income, calc_income.revenue)
 
     def menu_for_employee():
         IfMoreOrder.set_choice()
@@ -106,8 +105,8 @@ def order():
             pass
         else:
             return menu_for_employee()
-    menu_for_employee()
 
+    menu_for_employee()
 
 
 if __name__ == '__main__':

@@ -20,34 +20,6 @@ class Item:
 # абстрактный класс для элементов ассортимента
 
 
-class DonutItem:
-    def __init__(self, donut):
-        self.donut = donut
-
-    def show(self):
-        print(f'{self.donut.name} - {self.donut.price} рублей.')
-
-    def get_donut(self):
-        return f'{self.donut.name} - {self.donut.price} рублей.'
-
-
-# класс для обычных пончиков-элементов ассортимента
-
-class HandMadeDonutItem:
-    def __init__(self, donut):
-        self.donut = donut
-
-    def show(self):
-        print(f'{self.donut.name} - {self.donut.price} рублей '
-              f'(Цена меняется в зависимости от посыпок).')
-
-    def get_donut(self):
-        return f'{self.donut.name} - {self.donut.price} рублей.'
-
-
-# класс для самодельного пончика-элемента ассортимента
-
-
 class ListItems:
     def __init__(self):
         self.list = []
@@ -112,11 +84,6 @@ class RefillTopping:
             print(f'Запасы топпинга "{topping.get_name()}" успешно пополнены :)')
 
 
-class Order_Item:
-    def __init__(self, item):
-        self.item = item
-
-
 class OrderList:
     def __init__(self):
         self.order_items = []
@@ -169,6 +136,7 @@ class OrdersSumm:
     def get_orders_summ(self):
         return self.orders_summ
 
+
 class SalesFile:
     def __init__(self):
         self.name = 'sales.txt'
@@ -177,16 +145,17 @@ class SalesFile:
     def add_to_file(self, order, income, revenue):
         with open(self.name, 'a+', encoding='utf-8') as f:
             self.count += 1
-            f.write(str(f'\t\tЗаказ №{self.count}:\n'))
+            f.write(str(f'\n\t\tЗаказ №{self.count}:\n'))
             f.write(str(order))
-            f.write(str(f'Выручка: {revenue}\n'))
-            f.write(str(f'Прибыль: {income}\n\n'))
+            f.write(str(f'Выручка: {revenue} рублей.\n'))
+            f.write(str(f'Прибыль: {income} рублей.\n'))
             f.close()
 
     def show(self):
         with open(self.name, 'r+', encoding='utf-8') as f:
             self.info = f.read()
             print(self.info)
+            f.close()
 
 
 class Wish:
@@ -194,6 +163,3 @@ class Wish:
     @staticmethod
     def show():
         print('\nОплата прошла успешно. Приятного аппетита.\n')
-
-
-
