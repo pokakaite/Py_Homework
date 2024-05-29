@@ -1,0 +1,101 @@
+Index: ../.idea/Homework.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/venv\" />\r\n    </content>\r\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.11\" jdkType=\"Python SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../.idea/Homework.iml b/../.idea/Homework.iml
+--- a/../.idea/Homework.iml	(revision 22b9aa97a85dab0a7ab6091182ec9eca1d2c93ec)
++++ b/../.idea/Homework.iml	(date 1716548143338)
+@@ -4,7 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/venv" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.11" jdkType="Python SDK" />
++    <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d7c8c89c-df5e-4acc-8ccc-354dc17b7f48\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/Py_HW34/Задание4/Задание4.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Py_HW34/Задание4/ЗапрещенныеСлова.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact1.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact2.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact3.txt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../.idea/Homework.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../.idea/Homework.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/LOL/file.txt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Py_HW34/Задание4.py\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2glOTFBg6pIhYsXCUTmOsdAXSGC\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Python.Задание1.executor\": \"Run\",\r\n    \"Python.Задание2.executor\": \"Run\",\r\n    \"Python.Задание3.executor\": \"Run\",\r\n    \"Python.Задание4 (1).executor\": \"Run\",\r\n    \"Python.Задание4.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"last_opened_file_path\": \"C:/Users/kathe/Documents/Python/Classwork/Py_Classwork/urok_35-36.py\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\kathe\\Documents\\Python\\Py_Homework\\На проверку\\Py_HW34\\Задание4\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.Задание4 (1)\">\r\n    <configuration name=\"Задание1\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"На проверку\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Py_HW34\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/Py_HW34/Задание1.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Задание2\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"На проверку\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Py_HW34\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/Py_HW34/Задание2.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Задание3\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"На проверку\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Py_HW34\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/Py_HW34/Задание3.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Задание4 (1)\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"На проверку\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Py_HW34/Задание4\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/Py_HW34/Задание4/Задание4.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Задание4\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"На проверку\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/Py_HW34\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"C:\\Users\\kathe\\Documents\\Python\\Py_Homework\\На проверку\\Py_HW34\\Задание4\\Задание4.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.Задание4 (1)\" />\r\n        <item itemvalue=\"Python.Задание4\" />\r\n        <item itemvalue=\"Python.Задание3\" />\r\n        <item itemvalue=\"Python.Задание2\" />\r\n        <item itemvalue=\"Python.Задание1\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d7c8c89c-df5e-4acc-8ccc-354dc17b7f48\" name=\"Changes\" comment=\"\" />\r\n      <created>1716268703991</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1716268703991</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 22b9aa97a85dab0a7ab6091182ec9eca1d2c93ec)
++++ b/.idea/workspace.xml	(date 1716979404610)
+@@ -5,16 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="d7c8c89c-df5e-4acc-8ccc-354dc17b7f48" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/Задание4.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ЗапрещенныеСлова.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact1.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact2.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact3.txt" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../.idea/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Homework.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/LOL/file.txt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Проба/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Проба/main.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -40,7 +33,7 @@
+     "Python.Задание4 (1).executor": "Run",
+     "Python.Задание4.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
++    "git-widget-placeholder": "Merging main",
+     "last_opened_file_path": "C:/Users/kathe/Documents/Python/Classwork/Py_Classwork/urok_35-36.py"
+   }
+ }]]></component>
+Index: Проба/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from models import *\r\nimport copy\r\n\r\nsales = SalesFile()\r\ncalc_income = CalcIncome()\r\norders_summ = OrdersSumm()\r\nshow_order_summ = ShowOrderSumm()\r\nrefill = RefillTopping()\r\nchoice = Choice()\r\n\r\n\r\ndef order():\r\n    order_list = OrderList()\r\n    calc = Calc()\r\n    calc_order = CalculateOrder()\r\n    check = Check()\r\n\r\n    sugar = Sugar()\r\n    choco_glaze = ChocolateGlaze()\r\n    strawberry_glaze = StrawberryGlaze()\r\n    sprinkles = Sprinkles()\r\n\r\n    toppings_list = [sugar, choco_glaze, strawberry_glaze, sprinkles]\r\n    topping_amount = ToppingAmount(toppings_list)\r\n    # топпинги и их цена\r\n\r\n    basic_donut = BasicDonat()\r\n    basic_donut.add_topping(sugar)\r\n    choco_donut = ChocoDonut()\r\n    choco_donut.add_topping(choco_glaze)\r\n    simpsons_donut = SimpsonsDonut()\r\n    simpsons_donut.add_topping(strawberry_glaze)\r\n    simpsons_donut.add_topping(sprinkles)\r\n    hand_made_donut = HandMadeDonut()\r\n    # пончики и их составы\r\n\r\n    basic_donut.price = calc.calculate(basic_donut)\r\n    choco_donut.price = calc.calculate(choco_donut)\r\n    simpsons_donut.price = calc.calculate(simpsons_donut)\r\n    hand_made_donut.price = calc.calculate(hand_made_donut)\r\n\r\n    donuts_list = [basic_donut, choco_donut, simpsons_donut, hand_made_donut]\r\n    show_donuts = ShowItems(donuts_list)\r\n    # список пончиков (для вывода в меню)\r\n\r\n    toppings_list_items = ListItems()\r\n    toppings_list_items.add_to_list(sugar)\r\n    toppings_list_items.add_to_list(choco_glaze)\r\n    toppings_list_items.add_to_list(strawberry_glaze)\r\n    toppings_list_items.add_to_list(sprinkles)\r\n    show_toppings = ShowItems(toppings_list_items.get_list())\r\n    # список топпингов (для вывода в меню)\r\n\r\n    Greeting.show()\r\n\r\n    def start():\r\n        show_donuts.show()\r\n        WhichDonut.set_choice()\r\n        donut_copy = copy.deepcopy(donuts_list[WhichDonut.get_choice() - 1])\r\n        order_list.add_to_order(donut_copy)\r\n\r\n        def toppings():\r\n            IfToppings.set_choice()\r\n            if IfToppings.get_choice() == 1:\r\n                show_toppings.show()\r\n                WhichTopping.set_choice()\r\n                topping_copy = copy.deepcopy(toppings_list[WhichTopping.get_choice() - 1])\r\n                donut_copy.add_topping(topping_copy)\r\n                toppings_list[WhichTopping.get_choice() - 1].amount -= 1\r\n                topping_amount.show_warning()\r\n                refill.if_refill(toppings_list[WhichTopping.get_choice() - 1])\r\n                refill.refill(toppings_list[WhichTopping.get_choice() - 1], refill.get_choice())\r\n                donut_copy.price = calc.calculate(donut_copy)\r\n                donut_copy.show()\r\n                donut_copy.show_toppings()\r\n                return toppings()\r\n\r\n        toppings()\r\n        if IfToppings.get_choice() == 2:\r\n            IfDonut.set_choice()\r\n            if IfDonut.get_choice() == 1:\r\n                return start()\r\n            else:\r\n                order_list.show()\r\n                show_order_summ.show(calc_order.get_order_summ(order_list.get_order()))\r\n                check.add_to_check(order_list.get_order())\r\n\r\n                PayChoice.set_choice()\r\n                Wish.show()\r\n\r\n    start()\r\n\r\n    calc_income.calculate_income(calc_order.get_order_summ(order_list.get_order()))\r\n    calc_income.calculate_revenue(calc_order.get_order_summ(order_list.get_order()))\r\n    sales.add_to_file(check.get_check(), calc_income.income, calc_income.revenue)\r\n\r\n    def menu_for_employee():\r\n        IfMoreOrder.set_choice()\r\n        choice.make_choice(IfMoreOrder.get_choice(),\r\n                           order,\r\n                           topping_amount.show,\r\n                           sales.show,\r\n                           print)\r\n        if IfMoreOrder.get_choice() == 4:\r\n            pass\r\n        else:\r\n            return menu_for_employee()\r\n\r\n    menu_for_employee()\r\n\r\n\r\nif __name__ == '__main__':\r\n    order()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Проба/main.py b/Проба/main.py
+--- a/Проба/main.py	(revision 22b9aa97a85dab0a7ab6091182ec9eca1d2c93ec)
++++ b/Проба/main.py	(date 1716979359484)
+@@ -8,7 +8,6 @@
+ refill = RefillTopping()
+ choice = Choice()
+ 
+-
+ def order():
+     order_list = OrderList()
+     calc = Calc()
+@@ -108,6 +107,6 @@
+ 
+     menu_for_employee()
+ 
+-
+ if __name__ == '__main__':
+     order()
++
+Index: ../.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Black\">\r\n    <option name=\"sdkName\" value=\"Python 3.12\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.11\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../.idea/misc.xml b/../.idea/misc.xml
+--- a/../.idea/misc.xml	(revision 22b9aa97a85dab0a7ab6091182ec9eca1d2c93ec)
++++ b/../.idea/misc.xml	(date 1716548143347)
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.12" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (Py_Homework)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file

@@ -8,6 +8,7 @@ show_order_summ = ShowOrderSumm()
 refill = RefillTopping()
 choice = Choice()
 
+
 def order():
     order_list = OrderList()
     calc = Calc()
@@ -107,6 +108,6 @@ def order():
 
     menu_for_employee()
 
+
 if __name__ == '__main__':
     order()
-
