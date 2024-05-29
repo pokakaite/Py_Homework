@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c8c89c-df5e-4acc-8ccc-354dc17b7f48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LOL/file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/read_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_HW34/read_me.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Py_HW34/Задание4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Проба/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/.idea/Проба.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Проба/.idea/Проба.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +30,15 @@
     "Python.Задание2.executor": "Run",
     "Python.Задание3.executor": "Run",
     "Python.Задание4.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/kathe/Documents/Python/Classwork/Py_Classwork/urok_35-36.py"
+    "last_opened_file_path": "C:/Users/Academy/Documents/Данилова ЕА/Py_Classwork"
   }
 }]]></component>
   <component name="RunManager" selected="Python.Задание4">
     <configuration name="Задание1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="На проверку" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -64,7 +60,6 @@
     </configuration>
     <configuration name="Задание2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="На проверку" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -86,7 +81,6 @@
     </configuration>
     <configuration name="Задание3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="На проверку" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -108,7 +102,6 @@
     </configuration>
     <configuration name="Задание4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="На проверку" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
