@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c8c89c-df5e-4acc-8ccc-354dc17b7f48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/Задание4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ЗапрещенныеСлова.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LOL/file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +23,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Задание1.executor": "Run",
-    "Python.Задание2.executor": "Run",
-    "Python.Задание3.executor": "Run",
-    "Python.Задание4 (1).executor": "Run",
-    "Python.Задание4.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/kathe/Documents/Python/Classwork/Py_Classwork/urok_35-36.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Задание1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Задание2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Задание3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Задание4 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.Задание4.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kathe/Documents/Python/Classwork/Py_Classwork/urok_35-36.py&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kathe\Documents\Python\Py_Homework\На проверку\Py_HW34\Задание4" />
