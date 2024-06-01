@@ -16,6 +16,7 @@ else:
             file_name = input('\nСервер согласился.\nВведите название файла, который хотите передать - ')
             with open(file_name, 'rb') as f:
                 data = f.read(1024)
+            f.close()
             client.send(file_name.encode('utf-8'))
             client.send(data)
             print('Файл успешно доставлен.')

@@ -30,5 +30,6 @@ while flag:
             print('Файл успешно доставлен.')
             flag = False
             flag1 = False
+            f.close()
 client.close()
 server.close()

@@ -12,19 +12,23 @@ with open('file.json', 'w') as f:
             "8": " ",
             "9": " "}
     json.dump(data, f)
+f.close()
 
 
 def save_to_json(message, sign):
     with open('file.json', 'r+') as f1:
         data = json.load(f1)
         data.update({message: sign})
+    f1.close()
     with open('file.json', 'w') as f2:
         json.dump(data, f2)
+    f2.close()
 
 
 def show_field():
     with open('file.json', 'r') as f:
         data = json.load(f)
+    f.close()
 
     return f'''\n {data['1']} | {data['2']} | {data['3']} 
 ---+---+---
@@ -36,6 +40,7 @@ def show_field():
 def show_win_or_lose(place_1, place_2, place_3):
     with open('file.json', 'r') as f:
         data = json.load(f)
+    f.close()
     if data[str(place_1)] == 'x' and data[str(place_1)] == data[str(place_2)] and data[str(place_1)] == data[
         str(place_3)]:
         print('\nВЫ ПОБЕДИЛИ.')
