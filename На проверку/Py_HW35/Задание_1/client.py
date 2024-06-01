@@ -32,18 +32,20 @@ def show_field():
 ---+---+---
  {data['7']} | {data['8']} | {data['9']}'''
 
+
 def show_win_or_lose(place_1, place_2, place_3):
     with open('file.json', 'r') as f:
         data = json.load(f)
-    if data[str(place_1)] == 'x' and data[str(place_1)] == data[str(place_2)] and data[str(place_1)] == data[str(place_3)]:
+    if data[str(place_1)] == 'x' and data[str(place_1)] == data[str(place_2)] and data[str(place_1)] == data[
+        str(place_3)]:
         print('\nВЫ ПОБЕДИЛИ.')
         print('Конец игры')
         client.close()
-    elif data[str(place_1)] == 'o' and data[str(place_1)] == data[str(place_2)] and data[str(place_1)] == data[str(place_3)]:
+    elif data[str(place_1)] == 'o' and data[str(place_1)] == data[str(place_2)] and data[str(place_1)] == data[
+        str(place_3)]:
         print('\nВЫ ПРОИГРАЛИ.')
         print('Конец игры')
         client.close()
-
 
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
