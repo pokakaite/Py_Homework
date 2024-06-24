@@ -1,16 +1,3 @@
-class Menu:
-    def __init__(self):
-        self.choice = None
-
-    def show(self):
-        print('''\nЧто вы хотите сделать?
-    1 - Посмотреть данные в таблице,
-    2 - Выйти.''')
-
-    def set_choice(self):
-        self.choice = int(input('Ваш выбор - '))
-
-
 class ChoicesDict:
     def __init__(self):
         self.choices = {
@@ -38,38 +25,115 @@ class ShowChoicesMenu:
         for key, value in choices.items():
             print(f'{key} - {value}')
 
+class Show:
+    @staticmethod
+    def show_table(cursor, table):
+        print('-' * 98)
+        print(
+            f'| {table.column_salesman:^25} | {table.column_customer:^25} | {table.column_item:^25} | {table.column_price:^10} |')
+        print('-' * 98)
 
-class MakeChoice:
-    def __init__(self):
-        self.choice = None
+        for string in cursor.fetchall():
+            print(f'| {string[0]:^25} | {string[1]:^25} | {string[2]:^25} | {string[3]:^10} |')
+            print('-' * 98)
 
-    def set_choice(self):
-        self.choice = int(input('\nВведите номер пункта меню для взаимодействия с таблицей - '))
-
-    def get_choice(self):
-        return self.choice
-
-# def show_sales_of_salesman(conn, cursor, sales, salesman):
-#     conn.commit()
-#     cursor.execute(f"""SELECT Salesman, Customer, Item, Price
-#                     FROM {sales.table_name}
-#                     WHERE Salesman = '{salesman.name} {salesman.surname}'""")
-#     # for string in sales.table_name:
-#     # print(cursor.fetchall())
+class ShowAllSales:
+    @staticmethod
+    def show(conn, cursor, table):
+        conn.commit()
+        cursor.execute(f"""SELECT * FROM {table.table_name}""")
+        Show.show_table(cursor, table)
 
 
-# class GetAllSales:
-#     def get_all_sales(self, conn, cursor, table):
-#         conn.commit()
-#         cursor.execute(f"""SELECT * FROM {table.table_name}""")
-#
-# class ShowAllSales:
-#     def show(self, cursor, table):
-#         print('+' * 98)
-#         print(
-#             f'| {table.column_salesman:^25} | {table.column_customer:^25} | {table.column_item:^25} | {table.column_price:^10} |')
-#         print('+' * 98)
-#
-#         for string in cursor.fetchall():
-#             print(f'| {string[0]:^25} | {string[1]:^25} | {string[2]:^25} | {string[3]:^10} |')
-#             print('-' * 98)
+class ShowSalesOneSalesman:
+    @staticmethod
+    def show(conn, cursor, table, salesmen, salesman):
+        conn.commit()
+
+        cursor.execute(f'''SELECT Salesman, Customer, Item, Price
+                        FROM {table.table_name}
+                        WHERE Salesman = "{salesmen[salesman - 1].get_name()} {salesmen[salesman - 1].get_surname()}"''')
+        Show.show_table(cursor, table)
+
+
+class ShowMaxSumSale:
+
+    @staticmethod
+    def show(conn, cursor, table):
+        conn.commit()
+        cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
+                    FROM {table.table_name}''')
+        Show.show_table(cursor, table)
+
+
+class ShowMinSumSale:
+    @staticmethod
+    def show(conn, cursor, table):
+        conn.commit()
+        cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
+                    FROM {table.table_name}''')
+        Show.show_table(cursor, table)
+
+
+
+class ShowMaxSumSaleOneSalesman:
+
+    @staticmethod
+    def show(conn, cursor, table, salesmen, salesman):
+        conn.commit()
+        cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
+                    FROM {table.table_name}
+                    WHERE Salesman = "{salesmen[salesman - 1].get_name()} {salesmen[salesman - 1].get_surname()}"''')
+        Show.show_table(cursor, table)
+
+
+class ShowMinSumSaleOneSalesman:
+
+    @staticmethod
+    def show(conn, cursor, table, salesmen, salesman):
+        conn.commit()
+        cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
+                    FROM {table.table_name}
+                    WHERE Salesman = "{salesmen[salesman - 1].get_name()} {salesmen[salesman - 1].get_surname()}"''')
+        Show.show_table(cursor, table)
+
+
+class ShowMaxSumSaleOneCustomer:
+
+    @staticmethod
+    def show(conn, cursor, table, customers, customer):
+        conn.commit()
+        cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
+                    FROM {table.table_name}
+                    WHERE Customer = "{customers[customer - 1].get_name()} {customers[customer - 1].get_surname()}"''')
+        Show.show_table(cursor, table)
+
+
+class ShowMinSumSaleOneCustomer:
+
+    @staticmethod
+    def show(conn, cursor, table, customers, customer):
+        conn.commit()
+        cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
+                    FROM {table.table_name}
+                    WHERE Customer = "{customers[customer - 1].get_name()} {customers[customer - 1].get_surname()}"''')
+        Show.show_table(cursor, table)
+
+
+class ShowMaxSumSalesOneSalesman:
+
+    @staticmethod
+    def show(conn, cursor, table):
+        conn.commit()
+        cursor.execute(f'''SELECT Salesman, SUM(Price) AS SP
+                    FROM {table.table_name}
+                    GROUP BY Salesman''')
+
+        print('-' * 98)
+        print(
+            f'| {table.column_salesman:^25} | | {table.column_price:^10} |')
+        print('-' * 98)
+        for string in cursor.fetchall():
+            print(f'| {string[0]:^25} | {string[1]:^25} |')
+            print('-' * 98)
+
