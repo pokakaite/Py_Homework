@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7c8c89c-df5e-4acc-8ccc-354dc17b7f48" name="Changes" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/Проба/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Проба/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/.idea/Проба.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Проба/.idea/Проба.iml" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/Задание4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ЗапрещенныеСлова.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+    <list default="true" id="060a741d-68c6-474e-af34-2e6103708e99" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Py_HW35/.idea/Py_HW35.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Py_HW35/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Py_HW35/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Py_HW35/read_me.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Py_HW35/Задание_1/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Py_HW35/Задание_1/file.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Py_HW35/Задание_1/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Py_HW35/Задание_1/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Уже проверено/Проба/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_05_2024_15_43_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_05_2024_15_43__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LOL/file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4.py" beforeDir="false" />
->>>>>>> 8efc272ca0d3d8a24bf7727d7da253c231faad4b
+      <change beforePath="$PROJECT_DIR$/.idea/На проверку.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/read_me.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/Задание4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/ЗапрещенныеСлова.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Py_HW35/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Py_HW35/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Py_HW35/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/.idea/Проба.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/Проба.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/models/calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/calc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/models/choice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/choice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/models/donuts.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/donuts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/models/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Проба/models/topping.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/topping.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,149 +53,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2glOTFBg6pIhYsXCUTmOsdAXSGC" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2hAts9g4ROoS2M9WqVmrYQgm5wE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Задание1.executor": "Run",
-    "Python.Задание2.executor": "Run",
-    "Python.Задание3.executor": "Run",
-    "Python.Задание4 (1).executor": "Run",
-    "Python.Задание4.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Academy/Documents/Данилова ЕА/Py_Classwork"
+    "git-widget-placeholder": "Merging main",
+    "last_opened_file_path": "C:/Users/kathe/Documents/Python/Py_Homework"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kathe\Documents\Python\Py_Homework\На проверку\Py_HW34\Задание4" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.Задание4 (1)">
-    <configuration name="Задание1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="На проверку" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Py_HW34" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Py_HW34/Задание1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Задание2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="На проверку" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Py_HW34" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Py_HW34/Задание2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Задание3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="На проверку" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Py_HW34" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Py_HW34/Задание3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Задание4 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="На проверку" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Py_HW34/Задание4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Py_HW34/Задание4/Задание4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Задание4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="На проверку" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Py_HW34" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\kathe\Documents\Python\Py_Homework\На проверку\Py_HW34\Задание4\Задание4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.Задание4 (1)" />
-        <item itemvalue="Python.Задание4" />
-        <item itemvalue="Python.Задание3" />
-        <item itemvalue="Python.Задание2" />
-        <item itemvalue="Python.Задание1" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -182,11 +78,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d7c8c89c-df5e-4acc-8ccc-354dc17b7f48" name="Changes" comment="" />
-      <created>1716268703991</created>
+      <changelist id="060a741d-68c6-474e-af34-2e6103708e99" name="Changes" comment="" />
+      <created>1717048915799</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1716268703991</updated>
+      <updated>1717048915799</updated>
     </task>
     <servers />
   </component>
