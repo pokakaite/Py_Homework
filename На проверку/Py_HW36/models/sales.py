@@ -28,7 +28,6 @@ class Table_Sales:
         conn.commit()
         cursor.execute(f"""SELECT * FROM {self.table_name}""")
 
-
         print('+' * 98)
         print(f'| {self.column_salesman:^25} | {self.column_customer:^25} | {self.column_item:^25} | {self.column_price:^10} |')
         print('+' * 98)
@@ -36,6 +35,3 @@ class Table_Sales:
         for string in cursor.fetchall():
             print(f'| {string[0]:^25} | {string[1]:^25} | {string[2]:^25} | {string[3]:^10} |')
             print('-' * 98)
-
-
-

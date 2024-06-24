@@ -1,31 +1,33 @@
-from salesmen import *
-from customers import *
-from items import *
-from sales import *
+from models import *
 from view import *
 import sqlite3
 
-salesman_1 = Salesman_1()
-salesman_2 = Salesman_2()
-salesman_3 = Salesman_3()
+menu = Menu()
 
-customer_1 = Customer_1()
-customer_2 = Customer_2()
-customer_3 = Customer_3()
+def table():
+    salesman_1 = Salesman1()
+    salesman_2 = Salesman2()
+    salesman_3 = Salesman3()
 
-lamp = Lamp()
-headlight = Headlight()
-xenon = Xenon()
+    customer_1 = Customer1()
+    customer_2 = Customer2()
+    customer_3 = Customer3()
 
-salesmen = Table_Salesmen()
-customers = Table_Customers()
-items = Table_Items()
+    lamp = Lamp()
+    headlight = Headlight()
+    xenon = Xenon()
 
-sales = Table_Sales()
+    salesmen = TableSalesmen()
+    customers = TableCustomers()
+    items = TableItems()
 
-conn = sqlite3.connect(':memory:')
+    sales = Table_Sales()
 
-if __name__ == '__main__':
+    choices = ChoicesDict()
+    make_choice = MakeChoice()
+
+    conn = sqlite3.connect(':memory:')
+
     cursor = conn.cursor()
 
     salesmen.create_table(cursor)
@@ -52,7 +54,35 @@ if __name__ == '__main__':
     sales.insert_into(conn, cursor, salesman_3, customer_2, lamp)
     sales.insert_into(conn, cursor, salesman_3, customer_1, lamp)
 
-    sales.show_all(conn, cursor)
-    show_sales_of_salesman(conn, cursor, sales, salesman_1)
+    ShowChoicesMenu.show(choices.choices)
+    make_choice.set_choice()
+
+    match make_choice.get_choice():
+        case 1: pass
+        case 2: pass
+        case 3: pass
+        case 4: pass
+        case 5: pass
+        case 6: pass
+        case 7: pass
+        case 8: pass
+        case 9: pass
+        case 10: pass
+        case 11: pass
+        case 12: pass
+        case 13: pass
+        case 14: pass
 
     conn.close()
+    return start()
+
+def start():
+    menu.show()
+    menu.set_choice()
+    if menu.choice == 1:
+        table()
+    else:
+        pass
+
+if __name__ == '__main__':
+    start()

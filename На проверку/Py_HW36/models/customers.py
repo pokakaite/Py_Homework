@@ -1,7 +1,7 @@
 from abc import abstractmethod
 
 
-class Salesmen:
+class Customers:
     @abstractmethod
     def get_name(self):
         pass
@@ -11,10 +11,10 @@ class Salesmen:
         pass
 
 
-class Salesman_1:
+class Customer1:
     def __init__(self):
-        self.name = 'Екатерина'
-        self.surname = 'Данилова'
+        self.name = 'Иван'
+        self.surname = 'Иванов'
 
     def get_name(self):
         return self.name
@@ -23,10 +23,10 @@ class Salesman_1:
         return self.surname
 
 
-class Salesman_2:
+class Customer2:
     def __init__(self):
-        self.name = 'Татьяна'
-        self.surname = 'Данилова'
+        self.name = 'Александр'
+        self.surname = 'Александров'
 
     def get_name(self):
         return self.name
@@ -35,10 +35,10 @@ class Salesman_2:
         return self.surname
 
 
-class Salesman_3:
+class Customer3:
     def __init__(self):
-        self.name = 'Ирина'
-        self.surname = 'Данилова'
+        self.name = 'Василий'
+        self.surname = 'Васильев'
 
     def get_name(self):
         return self.name
@@ -47,9 +47,9 @@ class Salesman_3:
         return self.surname
 
 
-class Table_Salesmen:
+class TableCustomers:
     def __init__(self):
-        self.table_name = 'Salesmen'
+        self.table_name = 'Customers'
         self.column_name = 'Name'
         self.column_surname = 'Surname'
         self.data_type_text = 'text'
@@ -62,9 +62,9 @@ class Table_Salesmen:
                     )
                     """)
 
-    def insert_into(self, conn, cursor, salesman):
+    def insert_into(self, conn, cursor, customer):
         conn.commit()
-        cursor.execute(f"""INSERT INTO {self.table_name} values ('{salesman.name}', '{salesman.surname}')""")
+        cursor.execute(f"""INSERT INTO {self.table_name} values ('{customer.name}', '{customer.surname}')""")
 
     def select_all(self, conn, cursor):
         conn.commit()

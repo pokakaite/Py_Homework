@@ -47,7 +47,7 @@ class Headlight:
         return self.price
 
 
-class Table_Items:
+class TableItems:
     def __init__(self):
         self.table_name = 'Items'
         self.column_name = 'Name'
