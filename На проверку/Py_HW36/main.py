@@ -99,8 +99,10 @@ def table():
                 show_sales_one_salesman.show_table()
             case 3:
                 show_max_sum_sale.show()
+                show_max_sum_sale.show_table()
             case 4:
                 show_min_sum_sale.show()
+                show_min_sum_sale.show_table()
             case 5:
                 choose_salesman.set_choice(),
                 show_max_sum_sale_one_salesman.show(choose_salesman.get_name()),
@@ -141,7 +143,6 @@ def table():
 
         show_all_sales.show()
         show_all_sales.show_table()
-
         choose_salesman.set_choice()
         set_salesman.set_name()
 

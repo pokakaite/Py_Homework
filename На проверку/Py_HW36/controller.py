@@ -26,18 +26,6 @@ class MakeChoice:
         return self.choice
 
 
-# class MenuUpdate:
-#     def __init__(self):
-#         self.choice = None
-#
-#     def set_choice(self):
-#         print('''\nВведите Id сделки, которую хотите обновить.''')
-#         self.choice = int(input('Ваш выбор - '))
-#
-#     def get_choice(self):
-#         return self.choice
-
-
 class ChooseSalesman:
     def __init__(self, salesmen):
         self.choice = None
@@ -118,6 +106,7 @@ class SetCustomerName:
 
     def get_name(self):
         return self.new_name
+
 
 class SetItem:
     def __init__(self):
