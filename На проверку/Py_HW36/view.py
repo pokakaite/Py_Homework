@@ -119,7 +119,7 @@ class ShowOneSalesmanMaxSumSales(Show):
                                 ''')
 
         for string in self.cursor.fetchall():
-            print(f'Продавец с максимальной суммой продаж по всем сделкам - {string[0]} (Сумма: {string[1]})')
+            print(f'\nПродавец с максимальной суммой продаж по всем сделкам - {string[0]} (Сумма: {string[1]})')
             return
 
 class ShowOneSalesmanMinSumSales(Show):
@@ -132,7 +132,35 @@ class ShowOneSalesmanMinSumSales(Show):
                                 ''')
 
         for string in self.cursor.fetchall():
-            print(f'Продавец с минимальной суммой продаж по всем сделкам - {string[0]} (Сумма: {string[1]})')
+            print(f'\nПродавец с минимальной суммой продаж по всем сделкам - {string[0]} (Сумма: {string[1]})')
+            return
+
+class ShowOneCustomerMaxSumSales(Show):
+    def show(self):
+
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Customer, SUM(Price) AS SP
+                                FROM {self.table.table_name}
+                                GROUP BY Customer
+                                ORDER BY SP DESC
+                                ''')
+
+        for string in self.cursor.fetchall():
+            print(f'\nПокупатель с максимальной суммой покупок по всем сделкам - {string[0]} (Сумма: {string[1]})')
+            return
+
+class ShowOneCustomerMinSumSales(Show):
+    def show(self):
+
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Customer, SUM(Price) AS SP
+                                FROM {self.table.table_name}
+                                GROUP BY Customer
+                                ORDER BY SP
+                                ''')
+
+        for string in self.cursor.fetchall():
+            print(f'\nПокупатель с минимальной суммой покупок по всем сделкам - {string[0]} (Сумма: {string[1]})')
             return
 
 

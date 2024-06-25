@@ -79,6 +79,8 @@ def table():
     show_min_sum_sale_one_customer = ShowMinSumSaleOneCustomer(conn, cursor, sales)
     show_one_salesman_max_sum_sales = ShowOneSalesmanMaxSumSales(conn, cursor, sales)
     show_one_salesman_min_sum_sales = ShowOneSalesmanMinSumSales(conn, cursor, sales)
+    show_one_customer_max_sum_sales = ShowOneCustomerMaxSumSales(conn, cursor, sales)
+    show_one_customer_min_sum_sales = ShowOneCustomerMinSumSales(conn, cursor, sales)
     show_avg_sum_sales_one_salesman = ShowAvgSumSalesOneSalesman(conn, cursor, sales)
     show_avg_sum_sales_one_customer = ShowAvgSumSalesOneCustomer(conn, cursor, sales)
 
@@ -120,9 +122,9 @@ def table():
             case 10:
                 show_one_salesman_min_sum_sales.show()
             case 11:
-                pass
+                show_one_customer_max_sum_sales.show()
             case 12:
-                pass
+                show_one_customer_min_sum_sales.show()
             case 13:
                 choose_salesman.set_choice(),
                 show_avg_sum_sales_one_salesman.show(choose_salesman.get_name()),
