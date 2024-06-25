@@ -13,7 +13,7 @@ class ChoicesDict:
             10: 'Отображение продавца, у которого минимальная сумма продаж по всем сделкам',
             11: 'Отображение покупателя, у которого максимальная сумма продаж по всем сделкам',
             12: 'Отображение покупателя, у которого минимальная сумма продаж по всем сделкам',
-            13: 'Отображение средней суммы покупки для конкретного покупателя',
+            13: 'Отображение средней суммы покупки для конкретного продавца',
             14: 'Отображение средней суммы покупки для конкретного покупателя'
         }
 
@@ -25,115 +25,171 @@ class ShowChoicesMenu:
         for key, value in choices.items():
             print(f'{key} - {value}')
 
+
 class Show:
-    @staticmethod
-    def show_table(cursor, table):
-        print('-' * 98)
+    def __init__(self, conn, cursor, table):
+        self.conn = conn
+        self.cursor = cursor
+        self.table = table
+
+    def show_table(self):
+        print('-' * 105)
         print(
-            f'| {table.column_salesman:^25} | {table.column_customer:^25} | {table.column_item:^25} | {table.column_price:^10} |')
-        print('-' * 98)
+            f'| {'Id':^4} | {self.table.column_salesman:^25} | {self.table.column_customer:^25} | {self.table.column_item:^25} | {self.table.column_price:^10} |')
+        print('-' * 105)
 
-        for string in cursor.fetchall():
-            print(f'| {string[0]:^25} | {string[1]:^25} | {string[2]:^25} | {string[3]:^10} |')
-            print('-' * 98)
-
-class ShowAllSales:
-    @staticmethod
-    def show(conn, cursor, table):
-        conn.commit()
-        cursor.execute(f"""SELECT * FROM {table.table_name}""")
-        Show.show_table(cursor, table)
+        for count, string in enumerate(self.cursor.fetchall(), start=1):
+            print(f'| {count:^4} | {string[0]:^25} | {string[1]:^25} | {string[2]:^25} | {string[3]:^10} |')
+            print('-' * 105)
 
 
-class ShowSalesOneSalesman:
-    @staticmethod
-    def show(conn, cursor, table, salesmen, salesman):
-        conn.commit()
-
-        cursor.execute(f'''SELECT Salesman, Customer, Item, Price
-                        FROM {table.table_name}
-                        WHERE Salesman = "{salesmen[salesman - 1].get_name()} {salesmen[salesman - 1].get_surname()}"''')
-        Show.show_table(cursor, table)
+class ShowAllSales(Show):
+    def show(self):
+        self.conn.commit()
+        self.cursor.execute(f"""SELECT * FROM {self.table.table_name}""")
 
 
-class ShowMaxSumSale:
-
-    @staticmethod
-    def show(conn, cursor, table):
-        conn.commit()
-        cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
-                    FROM {table.table_name}''')
-        Show.show_table(cursor, table)
+class ShowSalesOneSalesman(Show):
+    def show(self, salesman):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, Customer, Item, Price
+                        FROM {self.table.table_name}
+                        WHERE Salesman = "{salesman}"''')
 
 
-class ShowMinSumSale:
-    @staticmethod
-    def show(conn, cursor, table):
-        conn.commit()
-        cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
-                    FROM {table.table_name}''')
-        Show.show_table(cursor, table)
+class ShowMaxSumSale(Show):
+    def show(self):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
+                    FROM {self.table.table_name}''')
 
 
+class ShowMinSumSale(Show):
 
-class ShowMaxSumSaleOneSalesman:
-
-    @staticmethod
-    def show(conn, cursor, table, salesmen, salesman):
-        conn.commit()
-        cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
-                    FROM {table.table_name}
-                    WHERE Salesman = "{salesmen[salesman - 1].get_name()} {salesmen[salesman - 1].get_surname()}"''')
-        Show.show_table(cursor, table)
+    def show(self):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
+                    FROM {self.table.table_name}''')
 
 
-class ShowMinSumSaleOneSalesman:
+class ShowMaxSumSaleOneSalesman(Show):
 
-    @staticmethod
-    def show(conn, cursor, table, salesmen, salesman):
-        conn.commit()
-        cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
-                    FROM {table.table_name}
-                    WHERE Salesman = "{salesmen[salesman - 1].get_name()} {salesmen[salesman - 1].get_surname()}"''')
-        Show.show_table(cursor, table)
+    def show(self, salesman):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
+                    FROM {self.table.table_name}
+                    WHERE Salesman = "{salesman}"''')
 
 
-class ShowMaxSumSaleOneCustomer:
+class ShowMinSumSaleOneSalesman(Show):
 
-    @staticmethod
-    def show(conn, cursor, table, customers, customer):
-        conn.commit()
-        cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
-                    FROM {table.table_name}
-                    WHERE Customer = "{customers[customer - 1].get_name()} {customers[customer - 1].get_surname()}"''')
-        Show.show_table(cursor, table)
+    def show(self, salesman):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
+                    FROM {self.table.table_name}
+                    WHERE Salesman = "{salesman}"''')
 
 
-class ShowMinSumSaleOneCustomer:
+class ShowMaxSumSaleOneCustomer(Show):
 
-    @staticmethod
-    def show(conn, cursor, table, customers, customer):
-        conn.commit()
-        cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
-                    FROM {table.table_name}
-                    WHERE Customer = "{customers[customer - 1].get_name()} {customers[customer - 1].get_surname()}"''')
-        Show.show_table(cursor, table)
+    def show(self, customer):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, Customer, Item, MAX(Price)
+                    FROM {self.table.table_name}
+                    WHERE Customer = "{customer}"''')
 
 
-class ShowMaxSumSalesOneSalesman:
+class ShowMinSumSaleOneCustomer(Show):
 
-    @staticmethod
-    def show(conn, cursor, table):
-        conn.commit()
-        cursor.execute(f'''SELECT Salesman, SUM(Price) AS SP
-                    FROM {table.table_name}
-                    GROUP BY Salesman''')
+    def show(self, customer):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, Customer, Item, MIN(Price)
+                    FROM {self.table.table_name}
+                    WHERE Customer = "{customer}"''')
 
-        print('-' * 98)
-        print(
-            f'| {table.column_salesman:^25} | | {table.column_price:^10} |')
-        print('-' * 98)
-        for string in cursor.fetchall():
-            print(f'| {string[0]:^25} | {string[1]:^25} |')
-            print('-' * 98)
 
+class ShowOneSalesmanMaxSumSales(Show):
+    def show(self):
+
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, SUM(Price) AS SP
+                                FROM {self.table.table_name}
+                                GROUP BY Salesman
+                                ORDER BY SP DESC
+                                ''')
+
+        for string in self.cursor.fetchall():
+            print(f'Продавец с максимальной суммой продаж по всем сделкам - {string[0]} (Сумма: {string[1]})')
+            return
+
+class ShowOneSalesmanMinSumSales(Show):
+    def show(self):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, SUM(Price) AS SP
+                                FROM {self.table.table_name}
+                                GROUP BY Salesman
+                                ORDER BY SP
+                                ''')
+
+        for string in self.cursor.fetchall():
+            print(f'Продавец с минимальной суммой продаж по всем сделкам - {string[0]} (Сумма: {string[1]})')
+            return
+
+
+class ShowAvgSumSalesOneSalesman(Show):
+
+    def show(self, salesman):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Salesman, AVG(Price)
+                        FROM {self.table.table_name}
+                        WHERE Salesman = "{salesman}"''')
+        for string in self.cursor.fetchall():
+            print(f'\nСредняя сумма покупки для продавца {string[0]} - {string[1]} рублей.')
+
+
+class ShowAvgSumSalesOneCustomer(Show):
+
+    def show(self, customer):
+        self.conn.commit()
+        self.cursor.execute(f'''SELECT Customer, AVG(Price)
+                        FROM {self.table.table_name}
+                        WHERE Customer = "{customer}"''')
+        for string in self.cursor.fetchall():
+            print(f'\nСредняя сумма покупки для покупателя {string[0]} - {string[1]} рублей.')
+
+
+class UpdateData(Show):
+    def update(self, salesman, new_salesman, customer, new_customer, item, new_item, price):
+        self.conn.commit()
+        self.cursor.execute(f"""UPDATE {self.table.table_name}
+                            SET Salesman = '{new_salesman}',
+                            Customer = '{new_customer}',
+                            Item = '{new_item}',
+                            Price = {price}
+                            WHERE Salesman = '{salesman}' AND
+                            Customer = '{customer}' AND
+                            Item = '{item}'""")
+
+        self.cursor.execute(f'''SELECT * FROM {self.table.table_name}''')
+
+
+class AddData(Show):
+    def add(self, new_salesman, new_customer, new_item, price):
+        self.conn.commit()
+        self.cursor.execute(f"""INSERT INTO {self.table.table_name}
+                            VALUES (
+                            '{new_salesman}', '{new_customer}', '{new_item}', '{price}')""")
+
+        self.cursor.execute(f'''SELECT * FROM {self.table.table_name}''')
+
+
+class DeleteData(Show):
+    def delete(self, salesman, customer, item, price):
+        self.conn.commit()
+        self.cursor.execute(f"""DELETE FROM {self.table.table_name}
+                            WHERE Salesman = '{salesman}' AND
+                            Customer = '{customer}' AND
+                            Item = '{item}' AND
+                            Price = {price}""")
+
+        self.cursor.execute(f'''SELECT * FROM {self.table.table_name}''')
