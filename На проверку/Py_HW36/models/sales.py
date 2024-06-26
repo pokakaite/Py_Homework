@@ -1,5 +1,6 @@
 class Table_Sales:
     def __init__(self):
+        self.id = 'Id'
         self.table_name = 'Sales'
         self.column_salesman = 'Salesman'
         self.column_customer = 'Customer'
@@ -30,7 +31,7 @@ class Table_Sales:
 
         print('-' * 105)
         print(
-            f'| {'Id':^4} | {self.column_salesman:^25} | {self.column_customer:^25} | {self.column_item:^25} | {self.column_price:^10} |')
+            f'| {self.id:^4} | {self.column_salesman:^25} | {self.column_customer:^25} | {self.column_item:^25} | {self.column_price:^10} |')
         print('-' * 105)
 
         for count, string in enumerate(cursor.fetchall(), start=1):
