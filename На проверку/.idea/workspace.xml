@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="060a741d-68c6-474e-af34-2e6103708e99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Py_HW35/.idea/Py_HW35.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW35/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW35/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW35/read_me.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW35/Задание_1/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW35/Задание_1/file.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW35/Задание_1/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py_HW35/Задание_1/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Уже проверено/Проба/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_05_2024_15_43_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_05_2024_15_43__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/На проверку.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/read_me.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/Задание4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/ЗапрещенныеСлова.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Py_HW34/Задание4/ПапкаДля4Задания/fact3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Py_HW35/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Py_HW35/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Py_HW35/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/.idea/Проба.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/.idea/Проба.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/models/calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/calc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/models/choice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/choice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/models/donuts.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/donuts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/models/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Проба/models/topping.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Уже проверено/Проба/models/topping.py" afterDir="false" />
-    </list>
+    <list default="true" id="060a741d-68c6-474e-af34-2e6103708e99" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,9 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2hAts9g4ROoS2M9WqVmrYQgm5wE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,8 +21,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
-    "last_opened_file_path": "C:/Users/kathe/Documents/Python/Py_Homework"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/kathe/Documents/Python/Py_Homework/На проверку/Py_HW36"
   }
 }]]></component>
   <component name="SharedIndexes">
