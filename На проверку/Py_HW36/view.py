@@ -28,6 +28,7 @@ class ShowChoicesMenu:
 
 class Show:
     def __init__(self, conn, cursor, table):
+        self.id = 'Id'
         self.conn = conn
         self.cursor = cursor
         self.table = table
@@ -35,7 +36,7 @@ class Show:
     def show_table(self):
         print('-' * 105)
         print(
-            f'| {'Id':^4} | {self.table.column_salesman:^25} | {self.table.column_customer:^25} | {self.table.column_item:^25} | {self.table.column_price:^10} |')
+            f'| {self.id:^4} | {self.table.column_salesman:^25} | {self.table.column_customer:^25} | {self.table.column_item:^25} | {self.table.column_price:^10} |')
         print('-' * 105)
 
         for count, string in enumerate(self.cursor.fetchall(), start=1):
