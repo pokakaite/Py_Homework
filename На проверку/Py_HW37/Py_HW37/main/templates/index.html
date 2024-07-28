@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table width="100%" border="1" cellspacing="0" cellpadding="4">
+       <caption>Таблица Пифагора</caption>
+        <tr>
+            <th></th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var string = '';
+        for (var i = 1; i <= 10; i++) {
+            string += "<tr>";
+            string += "<td><b>" + i + "</b></td>";
+            for (var j = 1; j <= 10; j++)
+                 string += "<td>" + (i*j) + "</td>";
+            string += "</tr>";
+        }
+        document.querySelector('table').innerHTML += string;
+    </script>
+</body>
+</html>
