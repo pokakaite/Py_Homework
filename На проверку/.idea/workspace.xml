@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="060a741d-68c6-474e-af34-2e6103708e99" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/На проверку.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/На проверку.iml" afterDir="false" />
-    </list>
+    <list default="true" id="060a741d-68c6-474e-af34-2e6103708e99" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +26,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Merging main",
-    "last_opened_file_path": "C:/Users/Academy/Documents/Данилова ЕА/Py_Classwork"
+    "last_opened_file_path": "C:/Users/Academy/Documents/Данилова ЕА/Py_Homework/На проверку/Py_HW36"
   }
 }]]></component>
   <component name="SharedIndexes">
