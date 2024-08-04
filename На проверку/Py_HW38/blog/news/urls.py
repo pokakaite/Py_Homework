@@ -4,5 +4,6 @@ from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', news, name='news')
+    path('', news, name='news'),
+    path('<str:smth>/', news_smth, name='news_smth')
 ]

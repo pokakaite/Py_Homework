@@ -1,10 +1,9 @@
 <!DOCTYPE html>
+{% extends 'header.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+    <title>{{news}}</title>
+    {% block main_section %}
+    <div class="news">&#10024; {{news}} &#10024;</div>
+    {% endblock %}

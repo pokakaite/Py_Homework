@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{home}}</title>
+    <style>
+        .section {
+        width: fit-content;
+        height: 20px;
+        margin-top: 22px;
+        }
+
+        a {
+        font-family: arial;
+        text-decoration: none;
+        font-size: larger;
+        color: white;
+        text-shadow: Indigo 0 0 5px;
+        }
+
+        a:hover {
+        text-decoration: underline;
+
+        }
+
+        header {
+        width: auto;
+        height: 70px;
+        background-color: violet;
+        }
+
+        .header {
+        width: 1200px;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        }
+
+        .home, .news, .management, .facts, .contacts, .history {
+        font-size: 50px;
+        font-family: cursive;
+        font-style: italic;
+        width: 900px;
+        text-align: center;
+        margin: auto;
+        margin-top: 180px;
+        }
+
+        .people, .photos {
+        font-size: 50px;
+        width: 900px;
+        text-align: center;
+        margin: auto;
+        margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="section">
+            <a href="{% url 'home' %}">{{home}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'news' %}">{{news}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'management' %}">{{management}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'facts' %}">{{facts}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'contacts' %}">{{contacts}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'history' %}">{{history}}</a>
+        </div>
+    </div>
+</header>
+</body>
+</html>
+{% block main_section %}
+{% endblock %}
