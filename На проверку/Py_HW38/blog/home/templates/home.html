@@ -2,15 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sterlitamak</title>
+    <style>
+        .section {
+        width: fit-content;
+        height: 20px;
+        margin-top: 22px;
+        }
+
+        a {
+        font-family: arial;
+        text-decoration: none;
+        font-size: larger;
+        }
+
+        a:hover {
+        text-decoration: underline;
+
+        }
+
+        header {
+        width: auto;
+        height: 70px;
+        background-color: violet;
+        }
+
+        .header {
+        width: 1200px;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <a href="{% url 'home' %}">{{home}}</a>
-        <a href="{% url 'news' %}">{{news}}</a>
-        <a href="{% url 'management' %}">{{management}}</a>
-        <a href="{% url 'facts' %}">{{facts}}</a>
-        <a href="{% url 'contacts' %}">{{contacts}}</a>
+<header>
+    <div class="header">
+        <div class="section">
+            <a href="{% url 'home' %}">{{home}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'news' %}">{{news}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'management' %}">{{management}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'facts' %}">{{facts}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'contacts' %}">{{contacts}}</a>
+        </div>
+        <div class="section">
+            <a href="{% url 'history' %}">{{history}}</a>
+        </div>
     </div>
+</header>
 </body>
 </html>
