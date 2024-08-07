@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'main/menu.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Топ лучших книг</title>
+    {% block main_section %}
+    <style>
+        .block {
+            width: auto;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            }
+        
+        .books {
+            font-size: 50px;
+            font-family: cursive;
+            font-style: italic;
+            width: 90vw;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            }
+    </style>
+    <div class="block">
+        <div class="books">Топ лучших книг</div>
+    </div>
+    {% endblock %}
