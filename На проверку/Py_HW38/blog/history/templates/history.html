@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'header.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{history}}</title>
+    {% block main_section %}
+    <div class="history">&#10024; {{history}} &#10024;</div>
+    {% if people %}
+    <div class="people">&#129337;&#129465;</div>
+    {% endif %}
+    {% if photos %}
+    <div class="photos">&#127974; &#127747;</div>
+    {% endif %}
+    {% endblock %}
