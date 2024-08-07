@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный мир</title>
+    <style>
+        body {
+            background-color: lemonchiffon;
+        }
+
+        .section {
+        text-align: center;
+        width: 15vw;
+        }
+
+        a {
+        font-family: arial;
+        text-decoration: none;
+        font-size: larger;
+        color: black;
+        }
+
+        a:hover {
+        text-decoration: underline;
+        }
+
+        header {
+        width: auto;
+        height: 70px;
+        background-color: burlywood;
+        }
+
+        .header {
+        width: 90vw;
+        height: 70px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="section">
+                <a href="{% url 'home' %}">Главная</a>
+            </div>
+            <div class="section">
+                <a href="{% url 'writers' %}">Писатели</a>
+            </div>
+            <div class="section">
+                <a href="{% url 'books' %}">Топ лучших книг</a>
+            </div>
+        </div>
+    </header>
+</body>
+{% block main_section %}
+{% endblock %}
+</html>
