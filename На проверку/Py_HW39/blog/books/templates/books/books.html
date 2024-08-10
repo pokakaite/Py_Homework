@@ -8,13 +8,13 @@
     <style>
         .block {
             width: auto;
-            height: 85vh;
+            height: 25vh;
             display: flex;
             align-items: center;
             margin: auto;
             }
         
-        .books {
+        .top_books {
             font-size: 50px;
             font-family: cursive;
             font-style: italic;
@@ -23,8 +23,23 @@
             text-align: center;
             margin: auto;
             }
+
     </style>
     <div class="block">
-        <div class="books">Топ лучших книг</div>
+        <div class="top_books">Топ лучших книг:</div>
+    </div>
+
+    <div>
+        <ol>
+            <li>
+                <a class='name'>Старик и море</a>
+            </li>
+            <li>
+                <a class='name'>И восходит солнце</a>
+            </li>
+            <li>
+                <a class='name'>Гамлет</a>
+            </li>
+        </ol>
     </div>
     {% endblock %}
