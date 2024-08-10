@@ -15,7 +15,7 @@
             }
 
         .home {
-            font-size: 50px;
+            font-size: 25px;
             font-family: cursive;
             font-style: italic;
             width: 90vw;
@@ -25,6 +25,6 @@
             }
     </style>
     <div class="block">
-        <div class="home">Главная</div>
+        <a class="home" href="{% url "choose" %}">Найти книги по фамилии автора и году выпуска</a>
     </div>
     {% endblock %}

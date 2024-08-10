@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'main/menu.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block main_section %}
+</head>
+<body>
+    <div>Выберите писателя</div>
+    <form action="">
+        <input type="radio" id="hemingway" name="writer" value='Хемингуэ́й'>
+        <label for="hemingway">Хемингуэ́й</label>
+        <input type="radio" id="shakespeare" name="writer" value="Шекспи́р">
+        <label for="shakespeare">Шекспи́р</label>
+        <button>отправить</button>
+    </form>
+
+    {% if writer %}
+        <p>{{writer}}</p>
+        <form action="{% url "books_list" %}">
+            <label for="year">Выберите год</label>
+            <select name="year" id="year">
+                <option value="1920">1920</option>
+                <option value="1920">1940</option>
+            </select>
+            <a href="{% url "books_list" %}"><button>Отправить</button></a>
+        </form>
+    {% endif %}
+</body>
+</html>
+{% endblock %}

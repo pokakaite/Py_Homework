@@ -31,7 +31,7 @@ def hemingway_book(request, book):
             cont = the_sun_also_rises
             return render(request, 'main/book.html', cont)
         case _:
-            return HttpResponseRedirect('/Hemingway')
+            return HttpResponseRedirect('/writers/Hemingway')
 
 def shakespeare_book(request, book):
     match book:
@@ -39,4 +39,4 @@ def shakespeare_book(request, book):
             cont = hamlet
             return render(request, 'main/book.html', cont)
         case _:
-            return HttpResponseRedirect('/Shakespeare')
+            return HttpResponseRedirect('/writers/Shakespeare')
