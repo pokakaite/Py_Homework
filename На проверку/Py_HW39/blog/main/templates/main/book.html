@@ -7,11 +7,30 @@
     <title>Document</title>
     {% block main_section %}
 
+    <style>
+        .name {
+            font-size: 30px;
+            font-family: cursive;
+            font-style: italic;
+          }
+
+        .description {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 1vw;
+        }
+    </style>
+
 </head>
 <body>
-    <div>{{name}}</div>
     <div>
-        <p>
+        <ul>
+            <li>
+                <div class="name">{{name}}</div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p class="description">
             {{description}}
         </p>
     </div>
