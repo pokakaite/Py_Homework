@@ -6,28 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     {% block main_section %}
+    <style>
+        .block {
+            height: 85vh;
+            width: 90vw;
+            align-items: center;
+            margin: auto;
+            display: flex;
+        }
+
+        form {
+            width: fit-content;
+            height: auto;
+            margin: auto;
+            display: block;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .choose_writer, .choose_year, button {
+            font-size: 25px;
+            font-family: cursive;
+            font-style: italic;
+            display: flex;
+            margin: auto;
+            width: fit-content;
+            text-align: center;
+        }
+
+        .choose_writer {
+            justify-content: space-between;
+            width: 600px;
+            padding: 20px;
+        }
+
+        .choose_year {
+            justify-content: space-between;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            align-items: center;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px;
+        }
+        
+        select {
+            width: 70px;
+            height: 25px;
+            margin-top: 8px;
+        }
+    </style>
 </head>
 <body>
-    <div>Выберите писателя</div>
-    <form action="">
-        <input type="radio" id="hemingway" name="writer" value='Хемингуэ́й'>
-        <label for="hemingway">Хемингуэ́й</label>
-        <input type="radio" id="shakespeare" name="writer" value="Шекспи́р">
-        <label for="shakespeare">Шекспи́р</label>
-        <button>отправить</button>
-    </form>
-
-    {% if writer %}
-        <p>{{writer}}</p>
+    <div class="block">
         <form action="{% url "books_list" %}">
-            <label for="year">Выберите год</label>
-            <select name="year" id="year">
-                <option value="1920">1920</option>
-                <option value="1920">1940</option>
-            </select>
-            <a href="{% url "books_list" %}"><button>Отправить</button></a>
+            <div class="choose_writer">
+                <div>Выберите писателя</div>
+                <input type="radio" id="hemingway" name="writer" value='Hemingway'>
+                <label for="hemingway">Хемингуэ́й</label>
+                <input type="radio" id="shakespeare" name="writer" value="Shakespeare">
+                <label for="shakespeare">Шекспи́р</label>
+            </div>
+            <div class="choose_year">
+                <label for="year">Выберите год</label>
+                <select name="year" id="year">
+                    <option value="1601">1601</option>
+                    <option value="1602">1602</option>
+                    <option value="1926">1926</option>
+                    <option value="1927">1927</option>
+                </select><br>
+            </div>
+            <button>Открыть список</button>
         </form>
-    {% endif %}
+    </div>
 </body>
 </html>
 {% endblock %}
