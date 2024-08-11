@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <form action="{% url 'result' %}">
+            <input type="search" id="search", placeholder="budslive/airpods", name="model">
+            <button>Найти</button>
+        </form>
+    </div>
+
+    {% if model %}
+        <p>{{model}}</p>
+    {% endif %}
+</body>
+</html>

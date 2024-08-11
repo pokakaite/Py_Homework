@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <style>
+        .car {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            width: 10vw;
+            height: 5vh;
+            margin: auto;
+            font-size: xx-large;
+        }
+
+        .car:hover {
+            text-decoration: underline;
+        }
+
+        .block {
+            width: 50vw;
+            height: 20vh;
+            margin: auto;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <a class="car" href="{% url "toyota" %}">Тойота</a>
+        <a class="car" href="{% url "honda" %}">Хонда</a>
+        <a class="car" href="{% url "renault" %}">Рено</a>
+    </div>
+
+    <div class="block">
+        {% if car %}
+            <div class="block">
+                <span class="car">{{car}}</span>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
