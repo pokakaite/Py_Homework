@@ -4,19 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekday</title>
+    <style>
+        .block {
+            width: 60vw;
+            height: 60vh;
+            margin: auto;
+            align-items: center;
+        }
+
+        .block2 {
+            width: 30vw;
+            height: auto;
+            margin: auto;
+            align-items: center;
+            text-align: center;
+        }
+
+        a {
+            font-size: xx-large;
+            text-decoration: none;
+            color: black;
+            margin: auto;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <div>
+    <div class="block">
+        <div class="block2">
             <a href="{% url "cars" %}">Задание 1. Машины</a>
         </div>
-        <div>
+        <div class="block2">
             <a href="{% url "weekday" %}">Задание 2. День недели</a>
         </div>
-        <div>
+        <div class="block2">
             <a href="{% url "headphones" %}">Задание 3. Наушники</a>
         </div>
-        <div>
+        <div class="block2">
             <a>Задание 4 - в предыдущем ДЗ</a>
         </div>
     </div>
