@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 2</title>
+    <style>
+        body {
+            background-color: lavender;
+            font-size: x-large;
+        }
+
+        .block {
+            width: 90vw;
+            height: 85vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .block2 {
+            width: 80vw;
+            height: 42.5vh;
+            margin: auto;
+            align-items: center;
+            text-align: center;
+        }
+
+        .number {
+            width: 120px;
+            height: 20px;
+        }
+
+        .piece {
+            display: flex;
+            width: 300px;
+            height: 35px;
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        .piece2 {
+            height: 35px;
+        }
+
+        .block4 {
+            margin: auto;
+            width: 800px;
+            align-items: center;
+            height: 70px;
+            justify-content: space-between;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        button {
+            margin: auto;
+            width: 140px;
+            font-size: x-large;
+            height: 50px;
+            text-align: center;
+        }
+
+        .result {
+            display: flex;
+            width: 300px;
+            height: 100px;
+            margin: auto;
+            text-align: center;
+            align-items: center;
+        }
+
+        span {
+            width: 250px;
+            height: 30px;
+            margin: auto;
+            text-align: center;
+            align-items: center;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <div class="block2">
+            <form action="{% url 'result' %}">
+                <div class="block3">
+                    <div class="piece">
+                        <div class="piece2">
+                            <label for="input1">Первое число:</label>
+                        </div>
+                        <div class="piece2">
+                            <input type="number" id="input1", name="input1", class="number">
+                        </div>
+                    </div>
+                    <div class="piece">
+                        <div class="piece2">
+                            <label for="input2">Второе число:</label>
+                        </div>
+                        <div class="piece2">
+                            <input type="number", id="input2", name="input2", class="number">
+                        </div>
+                    </div>
+
+                    <div class="piece">
+                        <div class="piece2">
+                            <label for="input3">Третье число:</label>
+                        </div>
+                        <div class="piece2">
+                            <input type="number", id="input3", name="input3", class="number">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block4">
+                    <input type="radio", id="min", name="radio", class="radio", value="min">
+                    <label for="min">Минимум из трёх</label>
+                    <input type="radio", id="max", name="radio", class="radio", value="max">
+                    <label for="max">Максимум из трёх</label>
+                    <input type="radio", id="avg", name="radio", class="radio", value="avg">
+                    <label for="avg">Среднеарифмитическое из трёх</label>
+                </div>
+                <button>Посчитать</button>
+            </form>
+            <div class="result">
+                {% if res %}
+                <span> Результат: {{ res }} </span>
+                {% endif %}
+
+                {% if error %}
+                <span> {{ error }} </span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

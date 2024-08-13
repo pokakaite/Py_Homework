@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    body {
+        background-color: lavender;
+    }
+
+    .block {
+        width: 90vw;
+        height: 90vh;
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: auto;
+        font-size: x-large;
+        color: darkslateblue;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div class="block">
+        <a href="{% url 'form1' %}">{{form1}}</a>
+        <a href="{% url "form2" %}">{{form2}}</a>
+        <a href="{% url "form3" %}">{{form3}}</a>
+        <a href="{% url "form4" %}">{{form4}}</a>
+    </div>
+</body>
+</html>
