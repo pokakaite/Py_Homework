@@ -8,6 +8,6 @@ class Form3(models.Model):
     surname = models.CharField('Фамилия', max_length=50)
     age = models.IntegerField('Возраст')
     email = models.EmailField('E-mail')
-    gender = models.Field(choices=CHOICES)
-    address = models.CharField('Адрес', max_length=250)
+    gender = models.CharField(choices=CHOICES, default=None, max_length=10)
+    address = models.CharField('Адрес', max_length=100)
     agreement = models.Field()

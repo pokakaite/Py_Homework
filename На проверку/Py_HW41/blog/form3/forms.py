@@ -19,17 +19,22 @@ class Form3_Form(ModelForm):
             
             'age':NumberInput(attrs={
                 'class':'m-2 p-2 border-2 block',
+                'min': '1',
+                'max':'100'
             }),
 
             'email':TextInput(attrs={
                 'class':'m-2 p-2 border-2 block',
             }),
 
-            'gender':RadioSelect(),
+            'gender':RadioSelect(attrs={
+                'checked':'false'
+            }),
 
             'address':Textarea(attrs={
                 'class':'m-2 p-2 border-2 block',
-                'placeholder':'Адрес'
+                'placeholder':'Адрес',
+                'rows': '5',
             }),
 
             'agreement':CheckboxInput()
