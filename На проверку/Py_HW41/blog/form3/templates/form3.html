@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="{% static "static/source/css/style.css" %}">
+</head>
+<body>
+    <form action="{% url "result" %}">
+        Заполните данные
+        {{form.name}}
+        {{form.surname}}
+        {{form.age}}
+        {{form.email}}
+        {{form.gender}}
+        {{form.address}}
+        {{form.agreement}}
+        <button>Submit</button>
+    </form>
+</body>
+</html>

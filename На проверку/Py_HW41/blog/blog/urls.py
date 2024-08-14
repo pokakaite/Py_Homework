@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,4 @@ urlpatterns = [
     path('form2/', include('form2.urls')),
     path('form3/', include('form3.urls')),
     path('form4/', include('form4.urls'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

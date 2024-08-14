@@ -3,6 +3,5 @@ from django.urls import path, include
 from .views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', form4, name='form4')
 ]
