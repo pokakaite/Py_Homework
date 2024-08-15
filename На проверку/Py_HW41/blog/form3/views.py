@@ -20,4 +20,4 @@ def result(request):
         'address': request.GET['address'],
         'agreement': request.GET['agreement'],
     }
-    return render(request, 'result.html', cont)
+    return render(request, 'result3.html', cont)
