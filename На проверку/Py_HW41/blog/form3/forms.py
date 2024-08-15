@@ -9,33 +9,42 @@ class Form3_Form(ModelForm):
         widgets = {
             'name':TextInput(attrs={
                 'class':'m-2 p-2 border-2 block',
-                'placeholder':'Имя'
+                'placeholder':'Имя',
+                'id':'name'
             }),
 
             'surname':TextInput(attrs={
                 'class':'m-2 p-2 border-2 block',
-                'placeholder':'Фамилия'
+                'placeholder':'Фамилия',
+                'id':'surname'
+
             }),
             
             'age':NumberInput(attrs={
                 'class':'m-2 p-2 border-2 block',
                 'min': '1',
-                'max':'100'
+                'max':'100',
+                'id':'age'
             }),
 
             'email':TextInput(attrs={
                 'class':'m-2 p-2 border-2 block',
+                'id':'email'
             }),
 
             'gender':RadioSelect(attrs={
-                'checked':'false'
+                'checked':'false',
+                'id':'gender'
             }),
 
             'address':Textarea(attrs={
                 'class':'m-2 p-2 border-2 block',
                 'placeholder':'Адрес',
                 'rows': '5',
+                'id':'address'
             }),
 
-            'agreement':CheckboxInput()
+            'agreement':CheckboxInput(attrs={
+                'id':'agreement'
+            })
         }   
