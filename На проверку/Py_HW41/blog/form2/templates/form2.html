@@ -12,7 +12,7 @@
 
         .block {
             width: 90vw;
-            height: 85vh;
+            height: 70vh;
             margin: auto;
             display: flex;
             align-items: center;
@@ -47,10 +47,16 @@
             margin: auto;
             width: 800px;
             align-items: center;
-            height: 70px;
+            height: 200px;
+            display: flex;
             justify-content: space-between;
             text-align: center;
-            line-height: 60px;
+            line-height: 50px;
+        }
+
+        .radio {
+            width: auto;
+            margin: auto;
         }
 
         button {
@@ -83,14 +89,14 @@
 <body>
     <div class="block">
         <div class="block2">
-            <form action="{% url 'result' %}">
+            <form action="{% url 'form2:result' %}">
                 <div class="block3">
                     <div class="piece">
                         <div class="piece2">
                             <label for="input1">Первое число:</label>
                         </div>
                         <div class="piece2">
-                            <input type="number" id="input1", name="input1", class="number">
+                            {{form.number_1}}
                         </div>
                     </div>
                     <div class="piece">
@@ -98,7 +104,7 @@
                             <label for="input2">Второе число:</label>
                         </div>
                         <div class="piece2">
-                            <input type="number", id="input2", name="input2", class="number">
+                            {{form.number_2}}
                         </div>
                     </div>
 
@@ -107,28 +113,19 @@
                             <label for="input3">Третье число:</label>
                         </div>
                         <div class="piece2">
-                            <input type="number", id="input3", name="input3", class="number">
+                            {{form.number_3}}
                         </div>
                     </div>
                 </div>
 
                 <div class="block4">
-                    <input type="radio", id="min", name="radio", class="radio", value="min">
-                    <label for="min">Минимум из трёх</label>
-                    <input type="radio", id="max", name="radio", class="radio", value="max">
-                    <label for="max">Максимум из трёх</label>
-                    <input type="radio", id="avg", name="radio", class="radio", value="avg">
-                    <label for="avg">Среднеарифмитическое из трёх</label>
+                    {{form.choice}}
                 </div>
                 <button>Посчитать</button>
             </form>
             <div class="result">
                 {% if res %}
                 <span> Результат: {{ res }} </span>
-                {% endif %}
-
-                {% if error %}
-                <span> {{ error }} </span>
                 {% endif %}
             </div>
         </div>

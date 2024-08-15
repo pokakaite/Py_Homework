@@ -1,5 +1,5 @@
 from .models import Form3
-from django.forms import ModelForm, TextInput, NumberInput, Textarea, ChoiceField, RadioSelect, CheckboxInput
+from django.forms import ModelForm, TextInput, NumberInput, Textarea, RadioSelect, CheckboxInput
 
 class Form3_Form(ModelForm):
     class Meta:
