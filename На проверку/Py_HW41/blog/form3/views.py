@@ -11,5 +11,13 @@ def form3(request):
     return render(request, 'form3.html', cont)
 
 def result(request):
-    cont = {}
-    return render(request, 'form3.html', cont)
+    cont = {
+        'name': request.GET['name'],
+        'surname': request.GET['surname'],
+        'age': request.GET['age'],
+        'email': request.GET['email'],
+        'gender': request.GET['gender'],
+        'address': request.GET['address'],
+        'agreement': request.GET['agreement'],
+    }
+    return render(request, 'result.html', cont)
