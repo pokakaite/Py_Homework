@@ -1,0 +1,27 @@
+{% load static %}
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants</title>
+    <link rel="stylesheet" href="{% static 'source/css/style.css' %}">
+</head>
+<body>
+    <div>
+        <a href="{% url "restaurants:create" %}">Добавить ресторан</a>
+    </div>
+    <div>
+        <a href="{% url "restaurants:show" 1 %}">Отобразить все рестораны</a>
+    </div>
+    <div>
+        <a href="{% url "restaurants:delete" 1 %}">Удалить ресторан</a>
+    </div>
+    <div>
+        <a href="{% url "restaurants:edit" 1 %}">Изменить информацию о ресторане</a>
+    </div>
+    <div>
+        <a href="{% url "restaurants:search" 1 %}">Найти ресторан по кухне</a>
+    </div>
+</body>
+</html>
