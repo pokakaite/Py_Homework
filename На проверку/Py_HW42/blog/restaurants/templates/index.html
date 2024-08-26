@@ -14,7 +14,7 @@
     <div>
         <a href="{% url "restaurants:show" 1 %}">Отобразить все рестораны</a>
     </div>
-    <div>
+    {% comment %} <div>
         <a href="{% url "restaurants:delete" 1 %}">Удалить ресторан</a>
     </div>
     <div>
@@ -22,6 +22,6 @@
     </div>
     <div>
         <a href="{% url "restaurants:search" 1 %}">Найти ресторан по кухне</a>
-    </div>
+    </div> {% endcomment %}
 </body>
 </html>

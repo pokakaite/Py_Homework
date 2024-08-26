@@ -14,9 +14,11 @@ def index(request):
 
 class CreateRestaurant(CreateView):
     model = Restaurants
-    success_url = '/show/'
     template_name = "create.html"
     form_class = Restaurants_Form
+    context_object_name = 'restaurant'
+    success_url = f'/show/{restaurant.id}'
+
 
 class ShowRestaurants(DetailView):
     model = Restaurants
