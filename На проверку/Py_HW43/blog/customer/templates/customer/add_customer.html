@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма по добавлению покупателя</title>
+</head>
+<body>
+    <h1>
+        Форма по добавлению покупателя
+    </h1>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{form.name}}
+        {{form.last_name}}
+        {{form.number}}
+        {{form.email}}
+        <span>{{error}}</span>
+        <button type="submit">Добавить покупателя</button>
+    </form>
+
+</body>
+</html>

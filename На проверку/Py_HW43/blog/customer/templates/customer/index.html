@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Покупатель</title>
+    <title>Покупатели</title>
 </head>
 <body>
-    Покупатель
+    <h1>
+        Покупатели
+    </h1>
+
+    {% for customer in customers %}
+    <div>
+        {{customer.id}}
+        {{customer.name}}
+        {{customer.last_name}}
+        {{customer.number}}
+        {{customer.email}}
+    </div>
+    {% endfor %}
+
+    <a href="{% url "customer:add_customer" %}"><button>Добавить покупателя</button></a>
 </body>
 </html>

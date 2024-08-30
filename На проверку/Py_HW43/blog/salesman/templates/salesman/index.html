@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Продавец</title>
+    <title>Продавцы</title>
 </head>
 <body>
-    Продавец
+    <h1>
+        Продавцы
+    </h1>
+
+    {% for salesman in salesmen %}
+        <div>
+            {{salesman.id}}
+            {{salesman.name}}
+            {{salesman.last_name}}
+            {{salesman.number}}
+            {{salesman.email}}
+            {{salesman.hiring_date}}
+            {{salesman.position}}
+        </div>
+    {% endfor %}
+
+    <a href="{% url "salesman:add_salesman" %}"><button>Добавить продавца</button></a>
 </body>
 </html>
