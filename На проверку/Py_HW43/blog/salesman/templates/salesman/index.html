@@ -6,20 +6,18 @@
     <title>Продавцы</title>
 </head>
 <body>
-    <h1>
+    <h2>
         Продавцы
-    </h1>
+    </h2>
 
     {% for salesman in salesmen %}
-        <div>
-            {{salesman.id}}
-            {{salesman.name}}
-            {{salesman.last_name}}
-            {{salesman.number}}
-            {{salesman.email}}
-            {% comment %} {{salesman.hiring_date}}
-            {{salesman.position}} {% endcomment %}
-        </div>
+    <div>
+        {{salesman.id}}.
+        Имя - {{salesman.name}},
+        Фамилия - {{salesman.last_name}},
+        Номер телефона - {{salesman.number}},
+        E-mail - {{salesman.email}}.
+    </div><br>
     {% endfor %}
 
     <a href="{% url "salesman:add_salesman" %}"><button>Добавить продавца</button></a>

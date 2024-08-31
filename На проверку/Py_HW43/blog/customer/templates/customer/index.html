@@ -6,18 +6,18 @@
     <title>Покупатели</title>
 </head>
 <body>
-    <h1>
+    <h2>
         Покупатели
-    </h1>
+    </h2>
 
     {% for customer in customers %}
     <div>
-        {{customer.id}}
-        {{customer.name}}
-        {{customer.last_name}}
-        {{customer.number}}
-        {{customer.email}}
-    </div>
+        {{customer.id}}.
+        Имя - {{customer.name}},
+        Фамилия - {{customer.last_name}},
+        Номер телефона - {{customer.number}},
+        E-mail - {{customer.email}}.
+    </div><br>
     {% endfor %}
 
     <a href="{% url "customer:add_customer" %}"><button>Добавить покупателя</button></a>

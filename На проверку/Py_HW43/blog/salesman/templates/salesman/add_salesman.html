@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма</title>
+    <title>Форма по добавлению продавца</title>
 </head>
 <body>
-    <h1>
+    <h2>
         Форма по добавлению продавца
-    </h1>
+    </h2>
 
     <form method="post" action="">
         {% csrf_token %}
-        {{form.name}}
-        {{form.last_name}}
-        {{form.number}}
-        {{form.email}}
+        Имя {{form.name}}<br><br>
+        Фамилия {{form.last_name}}<br><br>
+        Номер телефона {{form.number}}<br><br>
+        E-mail {{form.email}}<br><br>
         {% comment %} {{form.hiring_date}}
         {{form.position}} {% endcomment %}
         <span>{{error}}</span>

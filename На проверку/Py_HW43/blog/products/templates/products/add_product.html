@@ -6,16 +6,16 @@
     <title>Форма по добавлению товара</title>
 </head>
 <body>
-    <h1>
+    <h2>
         Форма по добавлению товара
-    </h1>
+    </h2>
 
     <form method="post" action="">
         {% csrf_token %}
-        {{form.name}}
-        {{form.description}}
-        {{form.price}}
-        {{form.salesman_id}}
+        Название {{form.name}}<br><br>
+        Описание {{form.description}}<br><br>
+        Цена {{form.price}}<br><br>
+        Продавец {{form.salesman_id}}<br><br>
         <button type="submit">Добавить товар</button>
     </form>
 
