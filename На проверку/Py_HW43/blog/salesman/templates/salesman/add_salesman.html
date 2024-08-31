@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма по добавлению продавца</title>
+    <title>Форма</title>
 </head>
 <body>
     <h1>
@@ -16,8 +16,8 @@
         {{form.last_name}}
         {{form.number}}
         {{form.email}}
-        {{form.hiring_date}}
-        {{form.position}}
+        {% comment %} {{form.hiring_date}}
+        {{form.position}} {% endcomment %}
         <span>{{error}}</span>
         <button type="submit">Добавить продавца</button>
     </form>

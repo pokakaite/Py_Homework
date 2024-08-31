@@ -6,6 +6,20 @@
     <title>Товары</title>
 </head>
 <body>
-    Товары
+
+    <h1>
+        Товары
+    </h1>
+    {% for product in products %}
+    <div>
+        {{product.id}}
+        {{product.name}}
+        {{product.description}}
+        {{product.price}}
+        {{product.salesman_id}}
+    </div>
+    {% endfor %}
+
+    <a href="{% url "products:add_product" %}"><button>Добавить товар</button></a>
 </body>
 </html>

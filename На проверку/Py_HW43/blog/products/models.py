@@ -4,10 +4,10 @@ from salesman.models import Salesman
 # Create your models here.
 
 class Products(models.Model):
-    name = models.CharField('Название', max_length=150, blank=True, null=True)
-    description = models.CharField('Описание', max_length=150, blank=True, null=True)
-    price = models.IntegerField('Цена')
-    salesman = models.ForeignKey(Salesman, on_delete=models.CASCADE)
+    name = models.CharField('Название', max_length=150, blank=True)
+    description = models.CharField('Описание', max_length=150, blank=True)
+    price = models.IntegerField('Цена', blank=True)
+    salesman_id = models.ForeignKey(Salesman, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
