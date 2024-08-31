@@ -12,8 +12,23 @@ def index(request):
     }
     return render(request, 'products/index.html', cont)
 
-class AddProduct(CreateView):
+class ProductsCreateView(CreateView):
     model = Products
     success_url = '/products/'
-    template_name = "products/add_product.html"
+    template_name = "products/create.html"
     form_class = ProductsForm
+
+class ProductsDetailView(DetailView):
+    model = Products
+    template_name = 'products/detail.html'
+    context_object_name = 'products'
+
+class ProductsUpdateView(UpdateView):
+    model = Products
+    template_name = "products/create.html"
+    form_class = ProductsForm
+    
+class ProductsDeleteView(DeleteView):
+    model = Products
+    success_url = '/products/'
+    template_name = "products/delete.html"   

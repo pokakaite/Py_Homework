@@ -9,16 +9,32 @@
     <h2>
         Товары
     </h2>
-    {% for product in products %}
-    <div>
-        {{product.id}}.
-        Название - {{product.name}},
-        Описание - {{product.description}},
-        Цена - {{product.price}},
-        Продавец - {{product.salesman_id}}.
-    </div><br>
-    {% endfor %}
 
-    <a href="{% url "products:add_product" %}"><button>Добавить товар</button></a>
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Цена</th>
+            <th>Продавец</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.salesman_id}}</td>
+                    <td>
+                        <a href="{% url 'products:detail' product.id %}">Подробнее...</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table><br>
+
+    <a href="{% url "products:create" %}"><button>Добавить товар</button></a>
 </body>
 </html>

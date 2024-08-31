@@ -9,5 +9,8 @@ class Products(models.Model):
     price = models.IntegerField('Цена', blank=True)
     salesman_id = models.ForeignKey(Salesman, on_delete=models.CASCADE)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
+    
+    def get_absolute_url(self):
+        return f'/products/{self.id}'
