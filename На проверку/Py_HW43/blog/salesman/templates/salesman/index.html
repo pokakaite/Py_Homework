@@ -10,16 +10,31 @@
         Продавцы
     </h2>
 
-    {% for salesman in salesmen %}
-    <div>
-        {{salesman.id}}.
-        Имя - {{salesman.name}},
-        Фамилия - {{salesman.last_name}},
-        Номер телефона - {{salesman.number}},
-        E-mail - {{salesman.email}}.
-    </div><br>
-    {% endfor %}
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Номер телефона</th>
+            <th>E-mail</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for salesman in salesmen %}
+                <tr>
+                    <td>{{salesman.name}}</td>
+                    <td>{{salesman.last_name}}</td>
+                    <td>{{salesman.number}}</td>
+                    <td>{{salesman.email}}</td>
+                    <td>
+                        <a href="{% url 'salesman:detail' salesman.id %}">Подробнее...</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table><br>
 
-    <a href="{% url "salesman:add_salesman" %}"><button>Добавить продавца</button></a>
+    <a href="{% url "salesman:create" %}"><button>Добавить продавца</button></a>
 </body>
 </html>

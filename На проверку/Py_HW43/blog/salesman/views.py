@@ -12,8 +12,23 @@ def index(request):
     }
     return render(request, 'salesman/index.html', cont)
 
-class AddSalesman(CreateView):
+class SalesmanCreateView(CreateView):
     model = Salesman
     success_url = '/salesman/'
-    template_name = "salesman/add_salesman.html"
+    template_name = "salesman/create.html"
     form_class = SalesmanForm
+
+class SalesmanDetailView(DetailView):
+    model = Salesman
+    template_name = 'salesman/detail.html'
+    context_object_name = 'salesman'
+
+class SalesmanUpdateView(UpdateView):
+    model = Salesman
+    template_name = "salesman/create.html"
+    form_class = SalesmanForm
+    
+class SalesmanDeleteView(DeleteView):
+    model = Salesman
+    success_url = '/salesman/'
+    template_name = "salesman/delete.html"   

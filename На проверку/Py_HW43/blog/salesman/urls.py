@@ -5,5 +5,8 @@ app_name = 'salesman'
 
 urlpatterns = [
     path('', index, name='index'),
-    path('add_salesman', AddSalesman.as_view(), name='add_salesman')
+    path('create', SalesmanCreateView.as_view(), name='create'),
+    path('<int:pk>/', SalesmanDetailView.as_view(), name='detail'),
+    path('<int:pk>/update', SalesmanUpdateView.as_view(), name='update'),
+    path('<int:pk>/delete', SalesmanDeleteView.as_view(), name='delete')
 ]

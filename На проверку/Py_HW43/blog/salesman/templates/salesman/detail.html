@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{salesman.name}}</title>
+</head>
+<body>
+    <div>
+        <h2>{{salesman.name}} {{salesman.last_name}}</h2>
+        <div>
+            Номер телефона - {{salesman.number}},
+            E-mail - {{salesman.email}}.
+        </div>
+
+        <a href="{% url "salesman:update" salesman.id %}">Редактировать информацию</a>
+        <a href="{% url "salesman:delete" salesman.id %}">Удалить информацию</a>
+    </div>
+
+</body>
+</html>

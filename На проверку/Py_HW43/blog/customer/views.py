@@ -12,8 +12,23 @@ def index(request):
     }
     return render(request, 'customer/index.html', cont)
 
-class AddCustomer(CreateView):
+class CustomerCreateView(CreateView):
     model = Customer
     success_url = '/customer/'
-    template_name = "customer/add_customer.html"
+    template_name = "customer/create.html"
     form_class = CustomerForm
+
+class CustomerDetailView(DetailView):
+    model = Customer
+    template_name = 'customer/detail.html'
+    context_object_name = 'customer'
+
+class CustomerUpdateView(UpdateView):
+    model = Customer
+    template_name = "customer/create.html"
+    form_class = CustomerForm
+    
+class CustomerDeleteView(DeleteView):
+    model = Customer
+    success_url = '/customer/'
+    template_name = "customer/delete.html"   

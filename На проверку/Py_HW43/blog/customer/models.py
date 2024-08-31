@@ -8,5 +8,8 @@ class Customer(models.Model):
     number = models.IntegerField('Номер телефона', blank=True)
     email = models.EmailField('E-mail', max_length=150, blank=True)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
+    
+    def get_absolute_url(self):
+        return f'/customer/{self.id}'

@@ -9,6 +9,9 @@ class Salesman(models.Model):
     email = models.CharField('E-mail', max_length=150, blank=True)
     # hiring_date = models.DateField('Дата приёма на работу', auto_now_add=False, blank=True)
     # position = models.CharField('Позиция в фирме', max_length=50, blank=True)
-
-    def __str__(self):
+    
+    def __str__(self) -> str:
         return self.name
+    
+    def get_absolute_url(self):
+        return f'/customer/{self.id}'
