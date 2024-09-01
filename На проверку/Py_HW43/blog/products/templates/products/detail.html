@@ -8,9 +8,9 @@
     <div>
         <h2>{{products.name}}</h2>
         <div>
-            Описание - {{products.description}},
-            Цена - {{products.price}},
-            Продавец - {{products.salesman_id}}
+            Описание - {{products.description}},<br>
+            Цена - {{products.price}} руб.,<br>
+            Продавец - {{products.salesman_id}}<br>
         </div>
 
         <a href="{% url "products:update" products.id %}">Редактировать информацию</a>

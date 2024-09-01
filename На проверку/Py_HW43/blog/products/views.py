@@ -18,6 +18,12 @@ class ProductsCreateView(CreateView):
     template_name = "products/create.html"
     form_class = ProductsForm
 
+# class CatalogCreateView(CreateView):
+#     model = Products
+#     success_url = '/cart/create/'
+#     template_name = "products/catalog.html"
+#     form_class = ProductsForm
+
 class ProductsDetailView(DetailView):
     model = Products
     template_name = 'products/detail.html'

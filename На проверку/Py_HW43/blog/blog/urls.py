@@ -23,6 +23,6 @@ urlpatterns = [
     path('products/', include('products.urls', namespace='products')),
     path('salesman/', include('salesman.urls', namespace='salesman')),
     path('customer/', include('customer.urls', namespace='customer')),
-    path('sales/', include('sales.urls', namespace='sales')),
-    path('cart/', include('cart.urls', namespace='cart')),
+    # path('cart/', include('cart.urls', namespace='cart')),
+    # path('sales/', include('sales.urls', namespace='sales'))
 ]

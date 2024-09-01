@@ -8,8 +8,8 @@
     <div>
         <h2>{{salesman.name}} {{salesman.last_name}}</h2>
         <div>
-            Номер телефона - {{salesman.number}},
-            E-mail - {{salesman.email}}.
+            Номер телефона - {{salesman.number}},<br>
+            E-mail - {{salesman.email}}.<br>
         </div>
 
         <a href="{% url "salesman:update" salesman.id %}">Редактировать информацию</a>

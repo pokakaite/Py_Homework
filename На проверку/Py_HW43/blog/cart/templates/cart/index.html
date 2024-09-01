@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Корзина</title>
+    <title>Продажи</title>
 </head>
 <body>
-    Корзина
+
+    <table border="1">
+        <thead>
+          <tr>
+            <th>№Заказ</th>
+            <th>Покупатель</th>
+            <th>Продавец</th>
+            <th>Товары</th>
+            <th>Сумма продажи</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for order in cart %}
+                <tr>
+                    <td>{{order.order}}</td>
+                    <td>{{order.customer_id}}</td>
+                    <td>{{order.salesman_id}}</td>
+                    <td></td>
+                    <td>Сумма</td>
+                    <td>
+                        <a href="{% url 'cart:detail' order.id %}">Подробнее...</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table><br>
+
+    <a href="{% url 'cart:create' %}">Совершить покупку</a>
+
 </body>
 </html>

@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def index(request):
     cont = {}
-    return render(request, 'sales/index.html')
+    return render(request, 'sales/index.html', cont)
