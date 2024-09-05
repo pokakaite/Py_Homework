@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+</head>
+<body>
+
+    <div>
+        <a href="{% url "customers:index" %}">{{show_customers}}</a><br>
+        <a href="{% url "salesmen:index" %}">{{show_salesmen}}</a><br>
+        <a href="{% url "products:index" %}">{{show_products}}</a><br>
+        <a href="{% url "cart:index" %}">{{show_cart}}</a><br>
+    </div>
+    
+</body>
+</html>
