@@ -16,13 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='main')),
+    path('customers/', include('customers.urls', namespace='customers')),
+    path('salesmen/', include('salesmen.urls', namespace='salesmen')),
     path('products/', include('products.urls', namespace='products')),
-    path('salesman/', include('salesman.urls', namespace='salesman')),
-    path('customer/', include('customer.urls', namespace='customer')),
-    # path('cart/', include('cart.urls', namespace='cart')),
-    # path('sales/', include('sales.urls', namespace='sales'))
-]
+    path('cart/', include('cart.urls', namespace='cart'))
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

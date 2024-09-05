@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+</head>
+<body>
+    <a href="{% url "main:index" %}"><button>Главная</button></a><br>
+    <h2>
+        Товары
+    </h2>
+
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Цена</th>
+            <th>Продавец</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.salesman_id}}</td>
+                    <td>
+                        <a href="{% url 'products:detail' product.id %}">Подробнее...</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table><br>
+
+    <a href="{% url "products:create" %}"><button>Добавить товар</button></a>
+</body>
+</html>
