@@ -6,10 +6,39 @@
     <title>Покупатели</title>
 </head>
 <body>
+    <a href="{% url "main:index" %}"><button>Главная</button></a><br>
+    <h2>
+        Покупатели
+    </h2>
 
-    <div>
-        lol
-    </div>
-    
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Номер телефона</th>
+            <th>E-mail</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+                <tr>
+                    <td>{{customer.customer_id}}</td>
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.last_name}}</td>
+                    <td>{{customer.number}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>
+                        <a href="{% url 'customers:detail' customer.id %}">Подробнее...</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table><br>
+
+      <a href="{% url "customers:create" %}"><button>Добавить покупателя</button></a>
+
 </body>
 </html>
