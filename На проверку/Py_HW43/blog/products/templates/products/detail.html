@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{product.name}}</title>
+</head>
+<body>
+    <a href="{% url "main:index" %}"><button>Главная</button></a><br>
+    <div>
+        <h2>{{product.product_id}}. {{product.name}}</h2>
+        <div>
+            Описание - {{product.description}},<br>
+            Цена - {{product.price}}<br>
+        </div>
+
+        <a href="{% url "products:update" product.id %}">Редактировать информацию</a>
+        <a href="{% url "products:delete" product.id %}">Удалить информацию</a>
+    </div>
+
+</body>
+</html>

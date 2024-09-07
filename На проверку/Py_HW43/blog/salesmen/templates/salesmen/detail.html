@@ -5,6 +5,8 @@
     <title>{{salesman.name}}</title>
 </head>
 <body>
+    <a href="{% url "main:index" %}"><button>Главная</button></a><br>
+
     <div>
         <h2>{{salesman.salesman_id}}. {{salesman.name}} {{salesman.last_name}}</h2>
         <div>

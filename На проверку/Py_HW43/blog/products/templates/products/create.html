@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма по добавлению товара</title>
+</head>
+<body>
+    
+    <a href="{% url "main:index" %}"><button>Главная</button></a><br>
+    <h2>
+        Форма по добавлению товара
+    </h2>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        Id {{form.product_id}}<br><br>
+        Название {{form.name}}<br><br>
+        Описание {{form.description}}<br><br>
+        Цена {{form.price}}<br><br>
+        <button type="submit">Добавить товар</button>
+    </form>
+    
+</body>
+</html>
