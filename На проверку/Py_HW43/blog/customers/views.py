@@ -8,4 +8,4 @@ def index(request):
     cont = {
         'customers': model
     }
-    return render(request, 'index.html', cont)
+    return render(request, 'customers/index.html', cont)

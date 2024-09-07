@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продавцы</title>
+</head>
+<body>
+    <a href="{% url "main:index" %}"><button>Главная</button></a><br>
+    <h2>
+        Продавцы
+    </h2>
+
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Номер телефона</th>
+            <th>E-mail</th>
+            <th>Дата приёма на работу</th>
+            <th>Позиция в фирме</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for salesman in salesmen %}
+                <tr>
+                    <td>{{salesman.salesman_id}}</td>
+                    <td>{{salesman.name}}</td>
+                    <td>{{salesman.last_name}}</td>
+                    <td>{{salesman.number}}</td>
+                    <td>{{salesman.email}}</td>
+                    <td>{{salesman.date}}</td>
+                    <td>{{salesman.position}}</td>
+                    <td>
+                        <a href="{% url 'salesmen:detail' salesman.id %}">Подробнее...</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table><br>
+
+      <a href="{% url "salesmen:create" %}"><button>Добавить продавца</button></a>
+
+    {% comment %} {% for salesman in salesmen %}
+        <div>
+            {{salesman.salesman_id}}
+            {{salesman.name}}
+            {{salesman.last_name}}
+            {{salesman.number}}
+            {{salesman.email}}
+            {{salesman.date}}
+            {{salesman.position}}
+        </div>
+    {% endfor %} {% endcomment %}
+
+</body>
+</html>
