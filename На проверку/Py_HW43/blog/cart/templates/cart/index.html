@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продажи</title>
+</head>
+<body>
+    <a href="{% url "main:index" %}"><button>Главная</button></a><br>
+
+    <table border="1">
+        <thead>
+          <tr>
+            <th>№ Продажи</th>
+            <th>Имя продавца</th>
+            <th>Имя покупателя</th>
+            <th>Товары</th>
+            <th>Количество</th>
+            <th>Дата продажи</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for sale in cart_products %}
+            <tr>
+                <td>{{sale.cart.cart_id}}</td>
+                <td>{{sale.cart.salesman_id}}</td>
+                <td>{{sale.cart.customer_id}}</td>
+                <td>{{sale.products}}</td>
+                <td>{{sale.count}}</td>
+                <td>{{sale.date}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table><br>
+
+      {% comment %} <a href="{% url "customers:create" %}"><button>Добавить покупателя</button></a> {% endcomment %}
+</body>
+</html>

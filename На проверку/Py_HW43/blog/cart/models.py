@@ -7,6 +7,7 @@ from products.models import Products
 # Create your models here.
 
 class Cart(models.Model):
+    cart_id = models.IntegerField()
     salesman_id = models.ForeignKey(Salesmen, on_delete=models.CASCADE)
     customer_id = models.ForeignKey(Customers, on_delete=models.CASCADE)
     completed = models.BooleanField('Оформлено?', default=bool)
