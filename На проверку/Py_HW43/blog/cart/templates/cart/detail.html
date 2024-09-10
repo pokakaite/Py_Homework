@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{customer.name}}</title>
+</head>
+<body>
+    <a href="{% url "main:index" %}"><button>Главная</button></a><br>
+
+    <div>
+        <h2>{{customer.customer_id}}. {{customer.name}} {{customer.last_name}}</h2>
+        <div>
+            Номер телефона - {{customer.number}},<br>
+            E-mail - {{customer.email}}<br>
+        </div>
+
+        <a href="{% url "customers:update" customer.id %}">Редактировать информацию</a>
+        <a href="{% url "customers:delete" customer.id %}">Удалить информацию</a>
+    </div>
+
+</body>
+</html>

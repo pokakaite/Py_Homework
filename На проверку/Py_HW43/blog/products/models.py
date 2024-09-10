@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Products(models.Model):
-    product_id = models.IntegerField()
+    product_id = models.IntegerField(unique=True)
     name = models.CharField('Название', max_length=50, blank=True)
     description = models.CharField('Описание', max_length=150, blank=True)
     price = models.IntegerField('Цена', blank=True)
