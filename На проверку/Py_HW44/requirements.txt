@@ -1,0 +1,5 @@
+Django~=5.1
+django-crispy-forms~=2.3
+crispy-bootstrap5~=2024.2
+django-phonenumber-field~=8.0.0
+phonenumbers~=8.13.45

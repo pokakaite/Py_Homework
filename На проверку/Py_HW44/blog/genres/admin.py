@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Reader
+from .models import Genre
 
 # Register your models here.
 
-admin.site.register(Reader)
+admin.site.register(Genre)

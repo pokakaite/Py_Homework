@@ -1,17 +1,18 @@
 from django.db import models
-from readers.models import Readers
+from readers.models import Reader
+from authors.models import Author
+from genres.models import Genre
+from publishment.models import Publishment
 
 # Create your models here.
 
-class Books(models.Model):
-    book_id = models.IntegerField(unique=True, primary_key=True, null=False)
-    name = models.CharField(max_length=150)
-    author = models.CharField(max_length=150)
-    year = models.IntegerField()
-    genre = models.CharField(max_length=50)
-    publishment = models.CharField(max_length=150)
-    in_library = models.BooleanField(default=bool)
-    reader_id = models.ForeignKey(Readers, on_delete=models.CASCADE, blank=True, null=True)
+class Book(models.Model):
+    name = models.CharField('name', max_length=30, null=False)
+    author = models.ForeignKey(Author, null=False, on_delete=models.CASCADE)
+    genre = models.ForeignKey(Genre, null=False, on_delete=models.CASCADE)
+    publishment = models.ForeignKey(Publishment, null=False, on_delete=models.CASCADE)
+    reader = models.ForeignKey(Reader, null=True, blank=True, on_delete=models.CASCADE)
+    year = models.IntegerField('year', null=False)
 
     def __str__(self) -> str:
-        return self.name
+        return f'{self.author.short_name} {self.name} - {self.publishment}, {self.year}'
