@@ -22,9 +22,25 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from users.views import register as user_register
 from profiles.views import profile as user_profile
+from django.contrib.auth import views as auth_views
+from users.models import router, routers
+from users.models import UserViewSet
+from books.models import BookViewSet
+
+
+
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+router.register(r'books', BookViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('profile/', user_profile, name='profile')
+    path('register/', user_register, name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('profile/', user_profile, name='profile'),
+    path('api/auth/', include('rest_framework.urls')),
+    path('api/v1/', include(router.urls))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
